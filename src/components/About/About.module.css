@@ -1,0 +1,19 @@
+.about {
+  text-align: center;
+  background-color: var(--brand-beige);
+  color: var(--pink-700);
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  padding-top: 6rem;
+}
+
+.about h2 {
+  text-transform: uppercase;
+}
+
+.content p {
+  margin-top: 2rem;
+  text-align: justify;
+  color: black;
+}
