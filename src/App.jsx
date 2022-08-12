@@ -1,13 +1,11 @@
-import { About } from './components/About/About'
-import { Home } from './components/Home/Home'
-import { Login } from './components/Login/Login'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <About />
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
 
