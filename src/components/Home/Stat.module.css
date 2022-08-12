@@ -1,0 +1,19 @@
+.Stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Stat h3 {
+  font-size: 3rem;
+  color: var(--pink-700);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.Stat p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
