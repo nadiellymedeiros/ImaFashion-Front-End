@@ -5,7 +5,7 @@ import { Stat } from './Stat'
 export function Home() {
   return (
     <section className={styles.home}>
-      <div>
+      <div className={styles.background}>
         <div className={styles.content}>
           <h2>BOAS-VINDAS A IMÃ FASHION</h2>
           <p>
@@ -14,7 +14,7 @@ export function Home() {
           </p>
           <a className={styles.button}>
             <WhatsappLogo />
-            Fale com um dos nosso atendentes!
+            Fale com um dos nosso atendentes
           </a>
         </div>
       </div>
