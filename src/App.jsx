@@ -1,7 +1,12 @@
+import { Home } from './components/Home/Home'
+import { Login } from './components/Login/Login'
+
 function App() {
   return (
     <div className="App">
-      <h1>Imã Fashion</h1>
+      <Home />
+
+      <Login />
     </div>
   )
 }
