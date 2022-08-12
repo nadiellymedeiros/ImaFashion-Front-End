@@ -1,6 +1,10 @@
-import styles from './Login.module.css'
-import { User } from 'phosphor-react'
-
 export function Login() {
-  return <div></div>
+  return (
+    <div>
+      <h1>Login</h1>
+      <form>
+        <input type="text" placeholder="E-mail"></input>
+      </form>
+    </div>
+  )
 }
