@@ -11,8 +11,7 @@
   min-width: 22rem;
 }
 
-.Stat h3 {
-  font-size: 3rem;
+.Stat h1 {
   color: var(--pink-700);
   line-height: 130%;
 
@@ -21,6 +20,5 @@
 
 .Stat p {
   margin: 0;
-  font-size: 1.2rem;
   line-height: 150%;
 }
