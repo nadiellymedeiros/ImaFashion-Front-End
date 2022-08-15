@@ -12,10 +12,7 @@ export function Home() {
             Desejamos que você tenha uma experiência incrível e encantadora na
             nossa loja Online!
           </p>
-          <a className={styles.button}>
-            <WhatsappLogo />
-            Fale com um dos nosso atendentes
-          </a>
+          <a className={styles.button}>Entre em contato</a>
         </div>
       </div>
 
