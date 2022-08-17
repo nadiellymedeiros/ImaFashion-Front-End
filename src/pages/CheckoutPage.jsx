@@ -1,7 +1,9 @@
+import { Checkout } from '../components/Checkout/Checkout'
+
 export function CheckoutPage() {
   return (
     <div>
-      <h1>CheckoutPage</h1>
+      <Checkout />
     </div>
   )
 }
