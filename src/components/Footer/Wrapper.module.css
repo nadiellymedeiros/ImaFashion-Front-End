@@ -7,7 +7,7 @@
 @media (min-width: 1024px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "A B";
+    grid-template-areas: 'A B';
     width: min(112rem, 100%);
     display: grid;
   }

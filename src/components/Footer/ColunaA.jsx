@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Texto from "./Texto";
-import "./ColunaA.css";
+
 
 const ColunaA = () => {
   return (

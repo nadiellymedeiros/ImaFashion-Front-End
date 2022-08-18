@@ -1,160 +1,131 @@
-import { WhatsappLogo, User } from 'phosphor-react'
+import { UserRectangle, ListDashes, MapPinLine } from 'phosphor-react'
 import styles from './Logon.module.css'
 
 export function Logon() {
   return (
     <div className={styles.container}>
       <span className={styles.nav}>
-        <img src="../assets/logo-dark.png" alt="" />
-        <h1>Criar uma conta</h1>
+        <img src="../src/assets/logo-dark.png" alt="" />
+        <h1>Cadastro</h1>
         <p>Compre mais rápido e acompanhe seus pedidos em um só lugar!</p>
       </span>
 
-      <main>
-        <div className={styles.parte1}>
-          <fieldset class="title">
-            <div class="title">
-              <legend className={styles.title}>
-                <User size={32} color="#fff55" />
-                Tipo de cadastro
-              </legend>
-            </div>
-
-            <div class="body">
-              <div class="form-group">
-                <div class="opcao">
-                  <label class="radio-inline">
-                    <input
-                      type="radio"
-                      name="tipo"
-                      id="pessoa fisica"
-                      value="PESSOA FISICA"
-                    />
-                    Pessoa Física
-                  </label>
-
-                  <label class="radio-inline">
-                    <input
-                      type="radio"
-                      name="tipo"
-                      id="pessoa juridica"
-                      value="PESSOA JURÍDICA"
-                    />
-                    Pessoa Jurídica
-                  </label>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <form action="#" class="form">
-            <fieldset>
+      <div className={styles.main}>
+        <div className={styles.partec}>
+          <div className={styles.parte1}>
+            <fieldset className={styles.fieldset}>
               <legend>
-                <i class="fa-solid fa-list"></i>Dados Pessoais
+                <UserRectangle
+                  size={34}
+                  style={{ marginRight: 5, marginLeft: 2, marginTop: -15 }}
+                />
+                <h4 className={styles.cadastro}>Tipo de cadastro</h4>
               </legend>
-              <div class="form-group">
-                <label for="nome" class="col-sm-2 control-label">
-                  Nome
-                  <input type="text" class="form-control" id="nome" />
+              <div className={styles.tipo}>
+                <label className={styles.radio}>
+                  <input
+                    type="radio"
+                    name="tipo"
+                    id="pessoa fisica"
+                    value="PESSOA FISICA"
+                  />
+                  Pessoa Física
                 </label>
-                <br />
-              </div>
 
-              <div class="form-group">
-                <label for="nome" class="col-sm-2 control-label">
-                  Sobrenome
-                  <input type="text" class="form-control" id="nome" />
-                </label>
-                <br />
-              </div>
-
-              <div class="form-group">
-                <label for="CPF" class="col-sm-2 control-label">
-                  CPF/CNPJ
-                  <input type="text" class="form-control" id="CPF" />
-                </label>
-                <br />
-              </div>
-
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">
-                  Email <input type="email" class="form-control" id="email" />
-                </label>
-              </div>
-
-              <div class="form-group">
-                <label for="celular" class="col-sm-2 control-label">
-                  Celular <input type="tel" class="form-control" id="celular" />
-                </label>
-              </div>
-
-              <div class="form-group">
-                <label for="telefone" class="col-sm-2 control-label">
-                  Telefone
-                  <input type="tel" class="form-control" id="telefone" />
+                <label className={styles.radio}>
+                  <input
+                    type="radio"
+                    name="tipo"
+                    id="pessoa juridica"
+                    value="PESSOA JURÍDICA"
+                  />
+                  Pessoa Jurídica
                 </label>
               </div>
             </fieldset>
-          </form>
+          </div>
+
+          <div className={styles.parte1}>
+            <fieldset className={styles.fieldset}>
+              <legend>
+                <ListDashes size={34} />
+                <h4 className={styles.dados}>Dados Pessoais</h4>
+              </legend>
+
+              <div className={styles.form}>
+                <p>
+                  Nome
+                  <input type="text" name="nome" value="" />
+                </p>
+                <p>
+                  Sobrenome
+                  <input type="text" name="sobrenome" value="" />
+                </p>
+                <p>
+                  CPF/CNPJ
+                  <input type="text" name="cpf" value="" />
+                </p>
+                <p>
+                  Email
+                  <input type="text" name="email" value="" />
+                </p>
+                <p>
+                  Celular
+                  <input type="text" name="celular" value="" />
+                </p>
+                <p>
+                  Telefone
+                  <input type="text" name="telefone" value="" />
+                </p>
+              </div>
+            </fieldset>
+          </div>
         </div>
 
-        <div class="parte2">
-          <fieldset class="formulario">
+        <div className={styles.parte2}>
+          <fieldset className={styles.fieldset}>
             <legend>
-              <i class="fa-solid fa-location-dot"></i>Endereço
+              <MapPinLine size={34} />
+              <h4 className={styles.endereço}>Endereço</h4>
             </legend>
 
-            <div class="form-group">
-              <label for="CEP" class="col-sm-2 control-label">
-                CEP <input type="text" class="form-control" id="CEP" />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="endereço" class="col-sm-2 control-label">
-                Endereço{' '}
-                <input type="text" class="form-control" id="endereço" />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="numero" class="col-sm-2 control-label">
-                Número <input type="text" class="form-control" id="numero" />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="complemento" class="col-sm-2 control-label">
+            <div className={styles.form}>
+              <p>
+                CEP
+                <input type="text" name="CEP" value="" />
+              </p>
+              <p>
+                Endereço
+                <input type="text" name="endereço" value="" />
+              </p>
+              <p>
+                Número
+                <input type="text" name="numero" value="" />
+              </p>
+              <p>
                 Complemento
-                <input type="text" class="form-control" id="complemento" />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="referencia" class="col-sm-2 control-label">
+                <input type="text" name="complemento" value="" />
+              </p>
+              <p>
                 Referência
-                <input type="text" class="form-control" id="referencia" />
-              </label>
+                <input type="text" name="referencia" value="" />
+              </p>
+              <p>
+                Bairro
+                <input type="text" name="bairro" value="" />
+              </p>
+              <p>
+                Cidade
+                <input type="text" name="cidade" value="" />
+              </p>
             </div>
 
-            <div class="form-group">
-              <label for="bairro" class="col-sm-2 control-label">
-                Bairro <input type="text" class="form-control" id="bairro" />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="cidade" class="col-sm-2 control-label">
-                Cidade <input type="text" class="form-control" id="cidade" />
-              </label>
-            </div>
-
-            <div class="form-group-estado">
-              <label for="estado" class="col-sm-2 control-label">
+            <div className={styles.formestado}>
+              <label for="estado" className="col-sm-2 control-label">
                 UF
               </label>
-              <div class="option">
-                <select class="option" name="estado" id="estado">
+              <div className={styles.option}>
+                <select className={styles.option} name="estado" id="estado">
                   <option value="AC">AC</option>
                   <option value="AL">AL</option>
                   <option value="AM">AM</option>
@@ -186,15 +157,15 @@ export function Logon() {
             </div>
           </fieldset>
         </div>
-      </main>
+      </div>
 
       <div>
         <a href="../index.html" target="_parent">
-          <button type="submit" class="botao1">
+          <button type="submit" className={styles.botao1}>
             Cancelar
           </button>
         </a>
-        <button type="submit" class="botao2">
+        <button type="submit" className={styles.botao2}>
           Enviar
         </button>
       </div>

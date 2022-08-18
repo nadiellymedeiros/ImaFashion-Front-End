@@ -1,6 +1,6 @@
 import React from "react";
 import { InstagramLogo } from "phosphor-react";
-import "./Instagram.css";
+
 
 const Instagram = () => {
   return (
