@@ -1,7 +1,6 @@
 footer {
-  display: flex;
   background-color: #7f004a;
-  padding-block: 4rem;
+  padding-block: 6rem;
   text-align: left;
   color: white;
 }

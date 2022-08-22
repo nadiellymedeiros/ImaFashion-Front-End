@@ -3,6 +3,7 @@ import styles from './Home.module.css'
 import { Stat } from './Stat'
 
 export function Home() {
+  
   return (
     <section className={styles.home}>
       <div className={styles.background}>

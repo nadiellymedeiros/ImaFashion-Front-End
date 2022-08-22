@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo-dark.png'
-
+import './Logo.css'
 
 const Logo = () => {
   return (

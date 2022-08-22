@@ -1,6 +1,6 @@
 import React from "react";
 import { FacebookLogo } from "phosphor-react";
-
+import "./Facebook.css";
 
 const Facebook = () => {
   return (
