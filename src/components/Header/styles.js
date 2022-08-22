@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.header`
   width: 100%;
@@ -34,7 +34,7 @@ export const Container = styled.header`
         position: relative;
 
         &:before {
-          content: "";
+          content: '';
           border-radius: 50px;
           bottom: 0px;
           position: absolute;
@@ -68,4 +68,4 @@ export const Container = styled.header`
   @media (max-width: 700px) {
     padding: 14.5px 16px;
   }
-`;
+`

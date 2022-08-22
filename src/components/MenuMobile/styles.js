@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { css } from "styled-components";
+import styled from 'styled-components'
+import { css } from 'styled-components'
 
 export const Container = styled.section`
   position: absolute;
@@ -84,4 +84,4 @@ export const Container = styled.section`
         transform: scale(1);
       }
     `}
-`;
+`
