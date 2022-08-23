@@ -1,17 +1,16 @@
-import React from "react";
-import ColunaA from "./ColunaA";
-import ColunaB from "./ColunaB";
-import Instagram from "./Instagram";
-import Facebook from "./Facebook";
-import "./Wrapper.css";
+import React from 'react'
+import ColunaA from './ColunaA'
+import ColunaB from './ColunaB'
+
+import styles from './Wrapper.module.css'
 
 const Wrapper = () => {
   return (
-    <div className="wrapper">
+    <div className={styles.wrapper}>
       <ColunaA />
       <ColunaB />
     </div>
-  );
-};
+  )
+}
 
-export default Wrapper;
+export default Wrapper

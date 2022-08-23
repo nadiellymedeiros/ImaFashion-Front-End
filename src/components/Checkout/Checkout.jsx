@@ -15,7 +15,7 @@ export function Checkout() {
           </a>
         </nav>
       </header>
-      <main>
+      <main className={styles.main}>
         <section className={styles.order}>
           <h2>Seu pedido</h2>
           <div className={styles.cards}>
@@ -222,7 +222,7 @@ export function Checkout() {
         </section>
       </main>
 
-      <footer>
+      <footer className={styles.footer}>
         <a href="../index.html">Voltar para o site</a>
         <a className={styles.endShopping} href="#">
           Finalizar compra

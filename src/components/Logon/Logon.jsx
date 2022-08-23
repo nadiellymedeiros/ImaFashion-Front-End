@@ -14,7 +14,7 @@ export function Logon() {
         <div className={styles.partec}>
           <div className={styles.parte1}>
             <fieldset className={styles.fieldset}>
-              <legend>
+              <legend className={styles.legend}>
                 <UserRectangle
                   size={34}
                   style={{ marginRight: 5, marginLeft: 2, marginTop: -15 }}
@@ -24,6 +24,7 @@ export function Logon() {
               <div className={styles.tipo}>
                 <label className={styles.radio}>
                   <input
+                    className={styles.input}
                     type="radio"
                     name="tipo"
                     id="pessoa fisica"
@@ -34,6 +35,7 @@ export function Logon() {
 
                 <label className={styles.radio}>
                   <input
+                    className={styles.input}
                     type="radio"
                     name="tipo"
                     id="pessoa juridica"
@@ -47,7 +49,7 @@ export function Logon() {
 
           <div className={styles.parte1}>
             <fieldset className={styles.fieldset}>
-              <legend>
+              <legend className={styles.legend}>
                 <ListDashes size={34} />
                 <h4 className={styles.dados}>Dados Pessoais</h4>
               </legend>
@@ -55,27 +57,57 @@ export function Logon() {
               <div className={styles.form}>
                 <p>
                   Nome
-                  <input type="text" name="nome" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="nome"
+                    value=""
+                  />
                 </p>
                 <p>
                   Sobrenome
-                  <input type="text" name="sobrenome" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="sobrenome"
+                    value=""
+                  />
                 </p>
                 <p>
                   CPF/CNPJ
-                  <input type="text" name="cpf" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="cpf"
+                    value=""
+                  />
                 </p>
                 <p>
                   Email
-                  <input type="text" name="email" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="email"
+                    value=""
+                  />
                 </p>
                 <p>
                   Celular
-                  <input type="text" name="celular" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="celular"
+                    value=""
+                  />
                 </p>
                 <p>
                   Telefone
-                  <input type="text" name="telefone" value="" />
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="telefone"
+                    value=""
+                  />
                 </p>
               </div>
             </fieldset>
@@ -84,7 +116,7 @@ export function Logon() {
 
         <div className={styles.parte2}>
           <fieldset className={styles.fieldset}>
-            <legend>
+            <legend className={styles.legend}>
               <MapPinLine size={34} />
               <h4 className={styles.endereço}>Endereço</h4>
             </legend>
@@ -92,31 +124,66 @@ export function Logon() {
             <div className={styles.form}>
               <p>
                 CEP
-                <input type="text" name="CEP" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="CEP"
+                  value=""
+                />
               </p>
               <p>
                 Endereço
-                <input type="text" name="endereço" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="endereço"
+                  value=""
+                />
               </p>
               <p>
                 Número
-                <input type="text" name="numero" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="numero"
+                  value=""
+                />
               </p>
               <p>
                 Complemento
-                <input type="text" name="complemento" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="complemento"
+                  value=""
+                />
               </p>
               <p>
                 Referência
-                <input type="text" name="referencia" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="referencia"
+                  value=""
+                />
               </p>
               <p>
                 Bairro
-                <input type="text" name="bairro" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="bairro"
+                  value=""
+                />
               </p>
               <p>
                 Cidade
-                <input type="text" name="cidade" value="" />
+                <input
+                  className={styles.input}
+                  type="text"
+                  name="cidade"
+                  value=""
+                />
               </p>
             </div>
 

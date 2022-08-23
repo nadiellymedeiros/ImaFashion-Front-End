@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-color: #7f004a;
   padding-block: 6rem;
   text-align: left;
@@ -6,7 +6,7 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  footer {
+  .footer {
     padding-block: 8rem;
   }
 }

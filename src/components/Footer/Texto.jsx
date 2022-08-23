@@ -1,13 +1,13 @@
-import React from "react";
-import "./Texto.css";
+import React from 'react'
+import styles from './Texto.module.css'
 
 const Texto = () => {
   return (
-    <p>
+    <p className={styles.paragraph}>
       ©2022 Imã Fashion. <br />
       Todos os direitos reservados.
     </p>
-  );
-};
+  )
+}
 
-export default Texto;
+export default Texto

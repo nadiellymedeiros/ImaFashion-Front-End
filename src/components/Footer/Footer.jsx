@@ -1,13 +1,13 @@
-import React from "react";
-import Wrapper from "./Wrapper";
-import "./Footer.css";
+import React from 'react'
+import Wrapper from './Wrapper'
+import styles from './Footer.module.css'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <Wrapper />
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

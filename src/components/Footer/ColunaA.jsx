@@ -1,15 +1,15 @@
-import React from "react";
-import Logo from "./Logo";
-import Texto from "./Texto";
-import "./ColunaA.css";
+import React from 'react'
+import Logo from './Logo'
+import Texto from './Texto'
+import styles from './ColunaA.module.css'
 
 const ColunaA = () => {
   return (
-    <div className="col-a">
+    <div className={styles.colA}>
       <Logo />
       <Texto />
     </div>
-  );
-};
+  )
+}
 
-export default ColunaA;
+export default ColunaA

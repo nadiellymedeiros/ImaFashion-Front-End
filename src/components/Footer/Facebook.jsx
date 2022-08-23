@@ -1,13 +1,13 @@
-import React from "react";
-import { FacebookLogo } from "phosphor-react";
-import "./Facebook.css";
+import React from 'react'
+import { FacebookLogo } from 'phosphor-react'
+import styles from './Facebook.module.css'
 
 const Facebook = () => {
   return (
-    <a className="face-icon" href="https://facebook.com">
+    <a className={styles.faceIcon} href="https://facebook.com">
       <FacebookLogo />
     </a>
-  );
-};
+  )
+}
 
-export default Facebook;
+export default Facebook

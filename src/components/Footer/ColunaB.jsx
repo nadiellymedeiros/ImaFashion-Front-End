@@ -1,15 +1,15 @@
-import React from "react";
-import Instagram from "./Instagram";
-import Facebook from "./Facebook";
-import "./ColunaB.css";
+import React from 'react'
+import Instagram from './Instagram'
+import Facebook from './Facebook'
+import styles from './ColunaB.module.css'
 
 const ColunaB = () => {
   return (
-    <div className="col-b">
+    <div className={styles.colB}>
       <Instagram />
       <Facebook />
     </div>
-  );
-};
+  )
+}
 
-export default ColunaB;
+export default ColunaB

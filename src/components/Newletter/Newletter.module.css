@@ -1,12 +1,17 @@
-
-h2 {
-background-color: var(--brand-beige);
-color: var(--pink-700);
-width: 80%;
-text-transform: uppercase;
+.newsLetter {
+  display: fex;
+  flex-direction: column;
+  width: 80%;
 }
 
-input {
+.tittle h2 {
+  background-color: var(--brand-beige);
+  color: var(--pink-700);
+  width: 80%;
+  text-transform: uppercase;
+}
+
+.newsletterInput {
   font-size: 3rem;
   border: 2px solid var(--pink-700);
   border-radius: 10px;
@@ -14,10 +19,9 @@ input {
   align-items: center;
   width: 30rem;
   height: 3rem;
- 
 }
 
-input::placeholder {
+.newsletterInput::placeholder {
   font-size: 1.5rem;
   display: flex;
   align-items: center;

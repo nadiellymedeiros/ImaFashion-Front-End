@@ -2,7 +2,8 @@
   text-align: left;
   margin: 4rem;
 }
-h2 {
+
+.header h2 {
   text-align: left;
   background-color: var(--brand-beige);
   color: var(--pink-700);

@@ -1,11 +1,11 @@
-.dark-logo {
+.darkLogo {
   width: 20rem;
 }
 
-img {
+.darkLogo img {
   max-width: 100%;
 }
 
-a {
+.darkLogo a {
   cursor: pointer;
 }
