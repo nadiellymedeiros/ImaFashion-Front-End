@@ -1,34 +1,38 @@
 .newsLetter {
-  display: fex;
+  display: flex;
   flex-direction: column;
-  width: 80%;
+  align-items: center;
+  width: 90%;
+  gap: 2rem;
+  padding-block: 5rem;
 }
 
 .tittle h2 {
   background-color: var(--brand-beige);
   color: var(--pink-700);
-  width: 80%;
+  width: 100%;
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
-.newsletterInput {
-  font-size: 3rem;
+.content .newsletterInput {
+  margin-top: 1rem;
   border: 2px solid var(--pink-700);
   border-radius: 10px;
   display: flex;
   align-items: center;
-  width: 30rem;
   height: 3rem;
+  width: 50vw;
+  font-size: 1rem;
 }
 
-.newsletterInput::placeholder {
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 1rem;
+.content .newsletterInput::placeholder {
+  font-size: 1rem;
 }
 
 .content {
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
 }

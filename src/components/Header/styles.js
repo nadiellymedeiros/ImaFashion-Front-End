@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-  width: 100%;
-  background-color: #7f004a;
+  width: 100vw;
+  background-color: var(--pink-700);
 
-  padding: 14.5px 64px;
+  padding: 15px 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--white);
 
   > section {
     display: flex;
@@ -15,6 +16,7 @@ export const Container = styled.header`
 
     &:last-child {
       font-size: 1.5rem;
+      cursor: pointer;
     }
 
     > img {
@@ -27,16 +29,19 @@ export const Container = styled.header`
 
     > nav {
       display: flex;
+      align-items: center;
       gap: 1.8rem;
 
       a {
         font-size: 18px;
         position: relative;
+        text-decoration: none;
+        color: var(--white);
 
         &:before {
           content: '';
           border-radius: 50px;
-          bottom: 0px;
+          bottom: -10px;
           position: absolute;
           width: 0%;
           height: 1.5px;
@@ -66,6 +71,6 @@ export const Container = styled.header`
   }
 
   @media (max-width: 700px) {
-    padding: 14.5px 16px;
+    padding: 14.5px 30px;
   }
 `

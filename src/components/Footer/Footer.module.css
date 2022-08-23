@@ -1,12 +1,11 @@
 .footer {
-  background-color: #7f004a;
-  padding-block: 6rem;
+  background-color: var(--pink-700);
+  padding-block: 2rem;
   text-align: left;
-  color: white;
 }
 
 @media (min-width: 1024px) {
   .footer {
-    padding-block: 8rem;
+    padding-block: 2rem;
   }
 }

@@ -3,7 +3,7 @@ import { WhatsappLogo } from 'phosphor-react'
 
 export function Contato() {
   return (
-    <section className={styles.tittle}>
+    <section className={styles.contato}>
       <header className={styles.header}>
         <h2>Entre em contato com a gente!</h2>
       </header>

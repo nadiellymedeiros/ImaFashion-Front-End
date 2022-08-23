@@ -1,5 +1,5 @@
-.wrapper {
-  width: min(50rem, 100%);
+ .wrapper {
+  width: 100vw;
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
@@ -7,8 +7,8 @@
 @media (min-width: 1024px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "A B";
-    width: min(112rem, 100%);
+    grid-template-areas: 'A B';
+    width: 100vw;
     display: grid;
   }
 }

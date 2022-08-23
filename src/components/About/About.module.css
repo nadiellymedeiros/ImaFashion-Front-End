@@ -1,21 +1,22 @@
 .about {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   background-color: var(--brand-beige);
-  color: var(--pink-700);
   width: 80%;
-  height: 100vh;
-  margin: auto;
-  padding-top: 6rem;
+  padding-block: 5rem;
 }
 
 .about h2 {
+  color: var(--pink-700);
   text-transform: uppercase;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 .content p {
   margin-top: 2rem;
   text-align: justify;
   color: black;
+  font-size: 1rem;
 }

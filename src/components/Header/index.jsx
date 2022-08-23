@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Container } from "./styles";
+import { Container } from './styles'
 
-import logoImg from "../../assets/logo-dark.png";
+import logoImg from '../../assets/logo-dark.png'
 
-import { MagnifyingGlass, ShoppingCart } from "phosphor-react";
-import { RiMenu3Fill } from "react-icons/ri";
+import { MagnifyingGlass, ShoppingCart } from 'phosphor-react'
+import { RiMenu3Fill } from 'react-icons/ri'
 
 export function Header({ setMenuIsVisible }) {
   return (
@@ -39,5 +39,5 @@ export function Header({ setMenuIsVisible }) {
         />
       </section>
     </Container>
-  );
+  )
 }
