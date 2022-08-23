@@ -6,9 +6,14 @@ import { useState } from 'react'
 import { Header } from '../components/Header/index'
 import { MenuMobile } from '../components/MenuMobile'
 import { HomeContainer } from '../styles/HomeStyles'
+import Newletter from '../components/Newletter/Newletter'
+import { Contato } from '../components/Contato/Contato'
+import Produtos from '../components/Produtos/Produtos'
+import { useProducts } from '../hooks/useProducts'
 
 export function HomePage() {
   const [menuIsVisible, setMenuIsVisible] = useState(false)
+  const produtos = useProducts()
   return (
     <div className="HomePage">
       <MenuMobile
@@ -19,7 +24,10 @@ export function HomePage() {
         <Header setMenuIsVisible={setMenuIsVisible} />
       </HomeContainer>
       <Home />
+      <Produtos produtos={produtos} />
       <About />
+      <Newletter />
+      <Contato />
       <Footer />
     </div>
   )

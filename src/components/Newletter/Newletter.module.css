@@ -1,0 +1,30 @@
+
+h2 {
+background-color: var(--brand-beige);
+color: var(--pink-700);
+width: 80%;
+text-transform: uppercase;
+}
+
+input {
+  font-size: 3rem;
+  border: 2px solid var(--pink-700);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 30rem;
+  height: 3rem;
+ 
+}
+
+input::placeholder {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.content {
+  font-size: 2rem;
+}

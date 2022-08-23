@@ -1,0 +1,28 @@
+.shopsection {
+  display: grid;
+  grid-template-areas: 'a b c';
+  justify-items: center;
+  gap: 3.2rem;
+  flex-direction: column;
+}
+
+.carditem {
+  flex-direction: column;
+  background: var(--pink-200);
+  width: 16rem;
+  height: 27rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.carditem img {
+  width: 200px;
+  height: 250px;
+}
+
+.addproductbtn {
+  background: var(--pink-300);
+  border-radius: 0.6rem;
+  border-color: var(--pink-600);
+}
