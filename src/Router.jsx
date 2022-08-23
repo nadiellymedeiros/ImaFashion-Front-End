@@ -3,7 +3,7 @@ import { HomePage } from './pages/HomePage'
 import { CheckoutPage } from './pages/CheckoutPage'
 import { Log } from './pages/LoginPage'
 import { SearchPage } from './pages/SearchPage'
-import ProductPage from './components/Produto/Produto'
+import ProductPage from './pages/ProductPage'
 
 export function Router() {
   return (

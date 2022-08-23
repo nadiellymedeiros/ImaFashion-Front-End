@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./Produto.module.css";
-import { Link } from "react-router-dom";
+import React from 'react'
+import styles from './Produto.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Produto(props) {
-  const produto = props.produto;
+  const produto = props.produto
   return (
     <div className={styles.produto}>
       <img className={styles.imagemproduto} src={produto.img} />
@@ -15,7 +15,7 @@ export default function Produto(props) {
         </p>
 
         <div>
-          <i ></i>
+          <i></i>
           <p className={styles.productdivision}>{produto.productDivision}</p>
         </div>
         <div>
@@ -23,13 +23,13 @@ export default function Produto(props) {
         </div>
         <div>
           <button>
-          <Link to={`/checkout`}>Adicionar ao carrinho</Link>
+            <Link to={`/checkout`}>Adicionar ao carrinho</Link>
           </button>
           <button>
-          <Link to={`/`}>Voltar</Link>
+            <Link to={`/`}>Voltar</Link>
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }
