@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 export const Container = styled.section`
+  color: var(--white);
   position: absolute;
   backdrop-filter: blur(3px);
   width: 100%;
@@ -46,6 +47,17 @@ export const Container = styled.section`
     transition: 0.7s;
   }
 
+  nav a {
+    text-decoration: none;
+    color: var(--pink-200);
+    font-size: 1.2rem;
+  }
+
+  nav a:hover {
+    color: var(--white);
+    font-weight: bold;
+  }
+
   .button {
     background: white;
     border-radius: 4rem;
@@ -59,6 +71,11 @@ export const Container = styled.section`
     padding: 10px 32px;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+  }
+
+  .button:hover {
+    background: var(--pink-700);
+    color: var(--pink-200);
   }
 
   .social-links {

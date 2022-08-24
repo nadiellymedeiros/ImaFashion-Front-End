@@ -1,21 +1,23 @@
 import styles from './Card.module.css'
 
-import { CreditCard, Star } from 'phosphor-react'
+import { CreditCard } from 'phosphor-react'
 
-export function Card() {
+export function Card({
+  productImg,
+  productName,
+  productPrice,
+  productDivision
+}) {
   return (
     <div className={styles.product}>
-      <img
-        src="./src/assets/conjunto-branco-alfaiataria.jpg"
-        className={styles.item}
-      />
+      <img src={productImg} className={styles.item} />
       <div className={styles.description}>
-        <p className={styles.titlePhoto}>Vestido Floral Verão Azul</p>
+        <p className={styles.titlePhoto}>{productName}</p>
 
-        <p className={styles.price}>R$ 90,00</p>
+        <p className={styles.price}>{productPrice}</p>
         <div className={styles.creditcard}>
           <CreditCard size={18} />
-          <p className={styles.parcela}>6 x de R$15,00</p>
+          <p className={styles.parcela}>{productDivision}</p>
         </div>
       </div>
     </div>
