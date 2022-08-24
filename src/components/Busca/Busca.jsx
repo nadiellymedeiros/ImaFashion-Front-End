@@ -1,29 +1,58 @@
 import styles from './Busca.module.css'
 import { MagnifyingGlass } from 'phosphor-react'
 import { Card } from './Card'
-import { About } from '../About/About'
+import { productsData } from '../../database/productsData'
+import { useState } from 'react'
+
+const estoque = productsData
 
 export function Busca() {
-  return (
-    <section>
-      <form action=" " method="post">
-        <label className={styles.label}></label>
+  const [busca, setBusca] = useState('')
+
+  const lowerBusca = busca.toLowerCase()
+
+  const produtosFiltados = estoque.filter(product =>
+    product.productName.toLowerCase().includes(lowerBusca)
+  )
+
+  console.log(busca)
+  if (busca.length <= 0) {
+    return (
+      <section className={styles.searchSection}>
         <input
           className={styles.input}
-          type="search"
+          type="text"
+          value={busca}
           placeholder="O que você procura hoje?"
-          id="busca"
-          name="q"
+          onChange={ev => setBusca(ev.target.value)}
         />
-        <button className={styles.button} type="submit">
-          <div className={styles.icone}>
-            <MagnifyingGlass size={26} />
-          </div>
-        </button>
-      </form>
-      <main>
-        <Card />
-      </main>
-    </section>
-  )
+      </section>
+    )
+  } else {
+    return (
+      <section className={styles.searchSection}>
+        <input
+          className={styles.input}
+          type="text"
+          value={busca}
+          placeholder="O que você procura hoje?"
+          onChange={ev => setBusca(ev.target.value)}
+        />
+
+        <main className={styles.product}>
+          <ul>
+            {produtosFiltados.map(product => (
+              <Card
+                key={product.id}
+                productImg={product.img}
+                productName={product.productName}
+                productPrice={product.productPrice}
+                productDivision={product.productDivision}
+              />
+            ))}
+          </ul>
+        </main>
+      </section>
+    )
+  }
 }

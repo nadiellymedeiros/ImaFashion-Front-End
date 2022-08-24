@@ -1,100 +1,30 @@
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90vw;
 
-.label {
-  display: block;
-  background-color:white;
-    border:solid 2px #7f004a;
-    border-radius:10px;
-    width:60%;
-    height:46px;
-    margin-top: 2rem;
-    position: absolute;
-    top: -0.03rem; 
-    right: 7.7rem;
+  gap: 2rem;
+  align: center;
 }
 
-.button {
-  padding: 10px;
-  position: absolute;   
-  top: 2rem; 
-  right: 4rem;
-  font-weight:bold;
-  float:left;
-  height:46px;
-  border-radius:0 7px 7px 0;
-  border:solid 2px #7f004a;
-  width:70px;
-  background:#f0a8d2;
-  position: absolute;
-  cursor: pointer;
-  align-items: center;
-}
 .input {
-  width: 60%;
-  padding: 10px;
-  position: absolute;   
-  top: 2rem; 
-  right: 7.7rem;
-  background-color:transparent;
-  border:solid 2px #7f004a;
-  border-radius:10px;
+  margin-inline: auto;
+  border: 1px solid var(--pink-700);
+  border-radius: 3px;
+  display: flex;
+  width: 70vw;
+  margin-top: 5rem;
+  align-items: center;
   font-size: 1rem;
+  padding: 0.5rem;
 }
 
-.icone {
-position: absolute;
-top: 0.5rem;
-right: 1.5rem;
-color: #7f004a;
+.input::placeholder {
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
-
-@media screen and (min-width: 800px) {
-  .label {
-    display: block;
-    background-color:white;
-      border:solid 2px #7f004a;
-      border-radius:10px;
-      width:50%;
-      height:46px;
-      margin-top: 2rem;
-      position: absolute;
-      top: -0.03rem; 
-      right: 34rem;
-  }
-  
-  .button {
-    padding: 10px;
-    position: absolute;   
-    top: 2rem; 
-    right: 34rem;
-    font-weight:bold;
-    float:left;
-    height:46px;
-    border-radius:0 7px 7px 0;
-    border:solid 2px #7f004a;
-    width:70px;
-    background:#f0a8d2;
-    position: absolute;
-    cursor: pointer;
-    align-items: center;
-  }
-  .input {
-    width: 50%;
-    padding: 10px;
-    position: absolute;   
-    top: 2rem; 
-    right: 34rem;
-    background-color:transparent;
-    border:solid 2px #7f004a;
-    border-radius:10px;
-    font-size: 1rem;
-  }
-  
-  .icone {
-  position: absolute;
-  top: 0.5rem;
-  right: 1.5rem;
-  color: #7f004a;
-  }
-
+.product {
+  font-size: 2rem;
 }

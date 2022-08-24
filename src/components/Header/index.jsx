@@ -13,19 +13,19 @@ export function Header({ setMenuIsVisible }) {
       <section>
         <img src={logoImg} alt="Logo" />
         <nav>
-          <a onclick="closeMenu()" href="index.html">
+          <a onclick="closeMenu()" href="http://127.0.0.1:5173">
             Início
           </a>
-          <a onclick="closeMenu()" href="#produtos">
+          <a onclick="closeMenu()" href="http://127.0.0.1:5173/#produtos">
             Produtos
           </a>
-          <a onclick="closeMenu()" href="#quemSomos">
+          <a onclick="closeMenu()" href="http://127.0.0.1:5173/#quemSomos">
             Quem somos
           </a>
-          <a onclick="closeMenu()" href="#newsletter">
+          <a onclick="closeMenu()" href="http://127.0.0.1:5173/#newsletter">
             NewsLetter
           </a>
-          <a onclick="closeMenu()" href="#contato">
+          <a onclick="closeMenu()" href="http://127.0.0.1:5173/#contato">
             Contato
           </a>
         </nav>

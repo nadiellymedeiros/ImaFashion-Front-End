@@ -1,63 +1,40 @@
 .product {
-    display: flex;
-    flex-direction: column;
-    align-items:initial;
-    padding-left: 1rem;
-  }
-
-.item {
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    height: 240px;
-    width: 175px;
-    justify-content:left;
-    cursor: pointer;
-    margin-top: 7rem;
-    margin-left: 5rem;
-  }
-
- .description {
-    display: flex;
-    flex-direction: column;
-    justify-content:left;
-    align-content: initial;
-    margin-left: 2.5rem;
-  }
-
-.star{
-  color: goldenrod;
-  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--gray-700);
+  width: 80vw;
+  margin: 2rem auto;
+  border: 2px solid var(--pink-700);
+  border-radius: 10px;
 }
 
- .titlePhoto {
-    display: flex;
-    font-size: 14px;
-    font-weight: bold;
-    padding-top: 0.5rem;
-    margin-left: 2.5rem;
-  }
-  
- .price {
+.item {
+  border-radius: 9px;
+  width: 8rem;
+}
+
+.description {
   display: flex;
-    font-size: 15px;
-    line-height: 21px;
-    font-weight: bold;
-    color: var(--pink-700);
-    margin-left: 2.5rem;
-  }
+  flex-direction: column;
 
-  .creditcard {
-    display: flex;
-    align-items:flex-end;
-    font-size: 15px;
-    margin-right: 0.5rem;
-    margin-left: 2.5rem;
-  }
+  font-size: 1.5rem;
+}
 
-  .parcela {
-    display: flex;
-    font-size: 10px;
-    margin-left: 0.1rem;
-    font-weight: bold;
+.titlePhoto {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.creditcard {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .product {
+    width: 40vw;
   }
+}
