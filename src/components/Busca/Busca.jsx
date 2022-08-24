@@ -5,9 +5,8 @@ import { About } from '../About/About'
 
 export function Busca() {
   return (
-    <section>
-      <form action=" " method="post">
-        <label className={styles.label}></label>
+    <section className={styles.searchSection}>
+      <form className={styles.searchForm} action=" " method="post">
         <input
           className={styles.input}
           type="search"

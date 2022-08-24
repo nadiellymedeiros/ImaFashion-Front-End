@@ -6,7 +6,7 @@ export function Card() {
   return (
     <div className={styles.product}>
       <img
-        src="../../assets/vestido-floral-verao-azul.png"
+        src="./src/assets/conjunto-branco-alfaiataria.jpg"
         className={styles.item}
       />
       <div className={styles.description}>
