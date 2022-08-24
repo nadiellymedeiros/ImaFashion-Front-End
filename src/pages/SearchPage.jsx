@@ -1,4 +1,4 @@
-import '../styles/SearchPage.css'
+import '../styles/HomePage.css'
 import { useState } from 'react'
 import { Header } from '../components/Header/index'
 import { MenuMobile } from '../components/MenuMobile'
@@ -9,7 +9,7 @@ export function SearchPage() {
   const [menuIsVisible, setMenuIsVisible] = useState(false)
 
   return (
-    <div className="searchPage ">
+    <div className="HomePage ">
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
