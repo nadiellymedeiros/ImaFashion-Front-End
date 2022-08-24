@@ -4,6 +4,7 @@ import { CheckoutPage } from './pages/CheckoutPage'
 import { Log } from './pages/LoginPage'
 import { SearchPage } from './pages/SearchPage'
 import ProductPage from './pages/ProductPage'
+import { ShoppingCart } from './components/ShoppingCart/ShoppingCart'
 
 export function Router() {
   return (
@@ -13,7 +14,7 @@ export function Router() {
       <Route path="/login" element={<Log />} />
       <Route path="/productPage/:id" element={<ProductPage />} />
       <Route path="/busca" element={<SearchPage />} />
-      <Route path="/carrinho" element={<h1>carrinho</h1>} />
+      <Route path="/carrinho" element={<ShoppingCart/>} />
     </Routes>
   )
 }
