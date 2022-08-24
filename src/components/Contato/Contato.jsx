@@ -3,7 +3,7 @@ import { WhatsappLogo } from 'phosphor-react'
 
 export function Contato() {
   return (
-    <section className={styles.contato}>
+    <section id="contato" className={styles.contato}>
       <header className={styles.header}>
         <h2>Entre em contato com a gente!</h2>
       </header>
@@ -13,10 +13,14 @@ export function Contato() {
           <li>contato@imafashion.com</li>
         </ul>
 
-        <button className={styles.button}>
+        <a
+          className={styles.button}
+          href="https://wa.me/5511987654321"
+          target="_blank"
+        >
           <WhatsappLogo />
           Fale com nossos representantes
-        </button>
+        </a>
       </div>
     </section>
   )

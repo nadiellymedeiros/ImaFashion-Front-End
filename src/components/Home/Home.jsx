@@ -3,9 +3,8 @@ import styles from './Home.module.css'
 import { Stat } from './Stat'
 
 export function Home() {
-  
   return (
-    <section className={styles.home}>
+    <section id="home" className={styles.home}>
       <div className={styles.background}>
         <div className={styles.content}>
           <h2>BOAS-VINDAS A IMÃ FASHION</h2>
@@ -13,7 +12,9 @@ export function Home() {
             Desejamos que você tenha uma experiência incrível e encantadora na
             nossa loja Online!
           </p>
-          <a className={styles.button}>Entre em contato</a>
+          <a href="#contato" className={styles.button}>
+            Entre em contato
+          </a>
         </div>
       </div>
 

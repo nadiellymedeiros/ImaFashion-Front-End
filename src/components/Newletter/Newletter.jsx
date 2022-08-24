@@ -3,7 +3,7 @@ import styles from './Newletter.module.css'
 
 export default function Newletter() {
   return (
-    <section className={styles.newsLetter}>
+    <section id="newsletter" className={styles.newsLetter}>
       <header className={styles.tittle}>
         <h2>Newsletter</h2>
       </header>

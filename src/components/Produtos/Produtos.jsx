@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Produtos(props) {
   const produtos = props.produtos
   return (
-    <section className={styles.shopsection}>
+    <section id="produtos" className={styles.shopsection}>
       {produtos.map(produto => {
         return (
           <div key={produto.id}>

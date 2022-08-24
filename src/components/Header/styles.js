@@ -10,6 +10,11 @@ export const Container = styled.header`
   justify-content: space-between;
   color: var(--white);
 
+  .icon {
+    text-decoration: none;
+    color: white;
+  }
+  
   > section {
     display: flex;
     gap: 2rem;
