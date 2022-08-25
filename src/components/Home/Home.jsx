@@ -2,6 +2,7 @@ import { WhatsappLogo } from 'phosphor-react'
 import styles from './Home.module.css'
 import { Stat } from './Stat'
 
+
 export function Home() {
   return (
     <section id="home" className={styles.home}>

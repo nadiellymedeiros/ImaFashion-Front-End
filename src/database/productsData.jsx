@@ -1,30 +1,36 @@
 export const productsData = [
   {
-    id: '0',
+    id: 0,
     img: '/src/database/productsImg/blusa-decote-listrada.jpg',
     productName: 'Blusa Decote V Listrada',
     productPrice: 'R$ 90,00',
     productDivision: '6x de R$ 15,00',
     hasDiscount: true,
-    productType: 'blouse'
+    productType: 'blouse',
+    addedToCart: false,
+    qty: 1
   },
   {
-    id: '1',
+    id: 1,
     img: '/src/database/productsImg/calca-jeans-personalizada.jpg',
     productName: 'Calça Jeans Estilizada',
     productPrice: 'R$ 150,00',
     productDivision: '6x de R$ 25,00',
     hasDiscount: false,
-    productType: 'jeans'
+    productType: 'jeans',
+    addedToCart: false,
+    qty: 1
   },
   {
-    id: '2',
+    id: 2,
     img: '/src/database/productsImg/conjunto-azul.jpg',
     productName: 'Conjunto Marinho',
     productPrice: 'R$ 150,00',
     productDivision: '6x de R$ 25,00',
     hasDiscount: false,
-    productType: 'conjunct'
+    productType: 'conjunct',
+    addedToCart: false,
+    qty: 1
   },
   {
     id: '3',
@@ -33,7 +39,8 @@ export const productsData = [
     productPrice: 'R$ 240,00',
     productDivision: '6x de R$ 40,00',
     hasDiscount: true,
-    productType: 'conjunct'
+    productType: 'conjunct',
+    addedToCart: false
   },
   {
     id: '4',
@@ -42,7 +49,8 @@ export const productsData = [
     productPrice: 'R$ 180,00',
     productDivision: '6x de R$ 30,00',
     hasDiscount: false,
-    productType: 'conjunct'
+    productType: 'conjunct',
+    addedToCart: false
   },
   {
     id: '5',
@@ -51,7 +59,8 @@ export const productsData = [
     productPrice: 'R$ 210,00',
     productDivision: '6x de R$ 35,00',
     hasDiscount: false,
-    productType: 'conjunct'
+    productType: 'conjunct',
+    addedToCart: false
   },
   {
     id: '6',
@@ -60,7 +69,8 @@ export const productsData = [
     productPrice: 'R$ 60,00',
     productDivision: '6x de R$ 10,00',
     hasDiscount: true,
-    productType: 't-shirt'
+    productType: 't-shirt',
+    addedToCart: false
   },
   {
     id: '7',
@@ -69,7 +79,8 @@ export const productsData = [
     productPrice: 'R$ 60,00',
     productDivision: '6x de R$ 10,00',
     hasDiscount: false,
-    productType: 't-shirt'
+    productType: 't-shirt',
+    addedToCart: false
   },
   {
     id: '8',
@@ -78,7 +89,8 @@ export const productsData = [
     productPrice: 'R$ 90,00',
     productDivision: '6x de R$ 15,00',
     hasDiscount: false,
-    productType: 'dress'
+    productType: 'dress',
+    addedToCart: false
   },
   {
     id: '9',
@@ -87,7 +99,8 @@ export const productsData = [
     productPrice: 'R$ 150,00',
     productDivision: '6x de R$ 25,00',
     hasDiscount: true,
-    productType: 'dress'
+    productType: 'dress',
+    addedToCart: false
   },
   {
     id: '10',
@@ -96,7 +109,8 @@ export const productsData = [
     productPrice: 'R$ 120,00',
     productDivision: '6x de R$ 20,00',
     hasDiscount: false,
-    productType: 'dress'
+    productType: 'dress',
+    addedToCart: false
   },
   {
     id: '11',
@@ -105,6 +119,7 @@ export const productsData = [
     productPrice: 'R$ 90,00',
     productDivision: '6x de R$ 15,00',
     hasDiscount: true,
-    productType: 'dress'
+    productType: 'dress',
+    addedToCart: false
   }
 ]
