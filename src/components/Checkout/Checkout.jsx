@@ -223,7 +223,7 @@ export function Checkout() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="../index.html">Voltar para o site</a>
+        <a href="/">Voltar para o site</a>
         <a className={styles.endShopping} href="#">
           Finalizar compra
         </a>

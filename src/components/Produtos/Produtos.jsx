@@ -9,6 +9,7 @@ export default function Produtos(props) {
         return (
           <div key={produto.id}>
             <div className={styles.carditem}>
+            <Link to={`/productPage/${produto.id}`}>
               <img src={produto.img} />
               <div>
                 <h3>{produto.productName}</h3>
@@ -20,10 +21,11 @@ export default function Produtos(props) {
                 </p>
                 <p>
                   <button className={styles.addproductbtn}>
-                    <Link to={`/productPage/${produto.id}`}>Ver Produto</Link>
+                    Ver Produto
                   </button>
                 </p>
               </div>
+              </Link>
             </div>
           </div>
         )
