@@ -10,19 +10,38 @@
   flex-direction: column;
   background: var(--pink-200);
   width: 16rem;
-  height: 27rem;
+  height: 22rem;
   border: none;
   border-radius: 0.6rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .carditem img {
   width: 200px;
   height: 250px;
+  
+}
+
+.carditem a {
+  font-size: 0.8rem;
 }
 
 .addproductbtn {
+  margin-top: 0.5rem;
   background: var(--pink-300);
   border-radius: 0.6rem;
   border-color: var(--pink-600);
+  width: 4rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+   ;
+}
+
+@media (max-width: 800px) {
+  .shopsection {
+    display:flex;
+   
+  }
 }

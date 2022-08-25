@@ -22,10 +22,10 @@ export default function Produto(props) {
           <p>Tamanho</p>
         </div>
         <div>
-          <button>
+          <button className={styles.tochekout}>
             <Link to={`/checkout`}>Adicionar ao carrinho</Link>
           </button>
-          <button>
+          <button className={styles.tohome}>
             <Link to={`/`}>Voltar</Link>
           </button>
         </div>
