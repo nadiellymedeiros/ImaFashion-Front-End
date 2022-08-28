@@ -10,19 +10,19 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
     <Container isVisible={menuIsVisible}>
       <X size={45} onClick={() => setMenuIsVisible(false)} />
       <nav>
-        <a onclick="closeMenu()" href="http://127.0.0.1:5173">
+        <a  href="http://127.0.0.1:5173">
           Início
         </a>
-        <a onclick="closeMenu()" href="http://127.0.0.1:5173/#produtos">
+        <a  href="http://127.0.0.1:5173/#produtos">
           Produtos
         </a>
-        <a onclick="closeMenu()" href="http://127.0.0.1:5173/#quemSomos">
+        <a  href="http://127.0.0.1:5173/#quemSomos">
           Quem somos
         </a>
-        <a onclick="closeMenu()" href="http://127.0.0.1:5173/#newsletter">
+        <a href="http://127.0.0.1:5173/#newsletter">
           NewsLetter
         </a>
-        <a onclick="closeMenu()" href="http://127.0.0.1:5173/#contato">
+        <a  href="http://127.0.0.1:5173/#contato">
           Contato
         </a>
 

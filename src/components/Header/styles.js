@@ -79,3 +79,14 @@ export const Container = styled.header`
     padding: 14.5px 30px;
   }
 `
+
+export const TextLink = styled.span`
+  color: var(--pink-700);
+  text-decoration: none;
+  font-size: 0.8rem;
+  background-color: var(--pink-100);
+  min-width: 10px;
+  min-height: 10px;
+  padding: 3px;
+  border-radius: 5px;
+`

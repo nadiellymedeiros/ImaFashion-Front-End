@@ -1,62 +1,39 @@
-import styles from "./ShoppingCart.module.css";
-import Product from "./Product";
-import { useState } from "react";
-import data from "./data";
+import styles from './ShoppingCart.module.css'
+import Product from './Product'
+
+import data from './data'
+import { useState, useContext } from 'react'
+import { CartContext } from '../../context/CartContext/cartContext'
 
 export function ShoppingCart() {
-  const [products, setProducts] = useState(data.addedProducts); // puxa os dados do data.js
-
-  const totalPrice = products.reduce(
-    //consolida o Subtotal
-    (acumulator, product) => acumulator + product.price * product.qty,
-    0
-  );
-
-  const onAdd = (product) => {
-    // para aumentar a quantidade de um produto
-    setProducts(
-      products.map((p) =>
-        p.id === product.id ? { ...product, qty: product.qty + 1 } : p
-      )
-    );
-  };
-
-  const onRemove = (product) => {
-    //para diminuir
-    if (product.qty !== 1) {
-      setProducts(
-        products.map((p) =>
-          p.id === product.id ? { ...product, qty: product.qty - 1 } : p
-        )
-      );
-    }
-  };
-
-  const onRemoveAll = (product) => {
-    //remover o produto
-    setProducts(products.filter((p) => p.id !== product.id));
-  };
+  const { estoque, cart, handleAddItemToCart, totalPrice, onIncrease, onDecrease, onRemove } =
+    useContext(CartContext)
 
   return (
     <section className={styles.scMenu}>
       <div className={styles.totalLabel}>
         <h1 className={styles.title}>Carrinho</h1>
-        <h1 className={styles.totalValue}> ({products.length}) </h1>
+        <h1 className={styles.totalValue}> ({cart?.length})</h1>
       </div>
 
       <div className={styles.products}>
-        {" "}
-        {/*para cada item do array Products é criado um componente Product*/}
-        {products.map((product) => {
+        {cart?.map((product, i) => {
           return (
-            <Product
-              key={product.id}
-              product={product}
-              onAdd={onAdd}
-              onRemove={onRemove}
-              onRemoveAll={onRemoveAll}
-            ></Product>
-          );
+            <div key={i}>
+              <Product
+                onRemove={onRemove}
+                onDecrease={onDecrease}
+                onIncrease={onIncrease}
+                index={i}
+                id={product.id}
+                image={product.img}
+                name={product.name}
+                price={product.price}
+                qty={product.qty}
+                size={product.size}
+              />
+            </div>
+          )
         })}
       </div>
 
@@ -69,7 +46,7 @@ export function ShoppingCart() {
       <div className={styles.buttonFinish}>
         <a
           className={styles.finish}
-          onClick={() => alert("cenas para o próximo capítulo")}
+          onClick={() => alert('cenas para o próximo capítulo')}
         >
           FINALIZAR COMPRA
         </a>
@@ -77,10 +54,10 @@ export function ShoppingCart() {
 
       <a
         className={styles.moreProducts}
-        onClick={() => alert("cenas para o próximo capítulo")}
+        onClick={() => alert('cenas para o próximo capítulo')}
       >
         Ver mais produtos
       </a>
     </section>
-  );
+  )
 }

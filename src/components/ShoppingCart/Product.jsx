@@ -1,19 +1,13 @@
-import { Trash, MinusCircle, PlusCircle } from "phosphor-react";
-import styles from "./Product.module.css";
-import ImageProduct from "./ImageProduct";
+import { Trash, MinusCircle, PlusCircle } from 'phosphor-react'
+import styles from './Product.module.css'
+import ImageProduct from './ImageProduct'
 
-export default function Product(props) {
-  //armazena as propriedades do componente Product
-  const { product, onAdd, onRemove, onRemoveAll } = props;
-
+export default function Product({ onIncrease, onDecrease, onRemove, index, id, image, name, price, qty, size }) {
   return (
     <div className={styles.product}>
       <div className={styles.productPhotoBox}>
-        <ImageProduct src={product.image}></ImageProduct>
-        <button
-          onClick={() => onRemoveAll(product)}
-          className={styles.buttonRemoveItem}
-        >
+        <ImageProduct src={image}></ImageProduct>
+        <button className={styles.buttonRemoveItem} onClick={()=>onRemove(index)}>
           <i className={styles.phTrash}>
             <Trash />
           </i>
@@ -22,28 +16,22 @@ export default function Product(props) {
       </div>
 
       <div className={styles.descrition}>
-        <h1 className={styles.titlePhoto}>{product.name}</h1>
-        <p className={styles.price}>R$ {product.price.toFixed(2)}</p>
+        <h1 className={styles.titlePhoto}>{name}</h1>
+        <p className={styles.price}>R$ {price}</p>
 
-        <div className={styles.size}></div>
+        <div className={styles.size}>Tamanho: {size}</div>
 
         <div className={styles.amount}>
           <h4>Quantidade: </h4>
           <span className={styles.plusOrMinus}>
-            <button
-              onClick={() => onRemove(product)}
-              className={styles.buttonMinus}
-            >
+            <button className={styles.buttonMinus} onClick={()=>onDecrease(id, size)}>
               <i className={styles.phMinusCircle}>
                 <MinusCircle size={32} />
               </i>
             </button>
 
-            <p className={styles.spaceQuantity}>{product.qty}</p>
-            <button
-              onClick={() => onAdd(product)}
-              className={styles.buttonPlus}
-            >
+            <p className={styles.spaceQuantity}>{qty}</p>
+            <button className={styles.buttonPlus} onClick={()=>onIncrease(id, size)}>
               <i className={styles.phPlusCircle}>
                 <PlusCircle size={32} />
               </i>
@@ -52,5 +40,5 @@ export default function Product(props) {
         </div>
       </div>
     </div>
-  );
+  )
 }
