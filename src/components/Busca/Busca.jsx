@@ -14,7 +14,6 @@ export function Busca() {
     product.productName.toLowerCase().includes(lowerBusca)
   )
 
-  console.log(busca)
   if (busca.length <= 0) {
     return (
       <section className={styles.searchSection}>
@@ -43,6 +42,7 @@ export function Busca() {
             {produtosFiltados.map(product => (
               <Card
                 key={product.id}
+                id={product.id}
                 productImg={product.img}
                 productName={product.productName}
                 productPrice={product.productPrice}
