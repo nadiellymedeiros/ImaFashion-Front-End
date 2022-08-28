@@ -44,7 +44,7 @@ export const productsData = [
   },
   {
     id: '4',
-    img: './src/database/productsImg/conjunto-moletom-amarelo.jpg',
+    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1020&q=80',
     productName: 'Conjunto Moletom Amarelo',
     productPrice: 180.0,
     productDivision: '6x de R$ 30,00',
@@ -54,7 +54,7 @@ export const productsData = [
   },
   {
     id: '5',
-    img: './src/database/productsImg/conjunto-terno-preto.jpg',
+    img: 'https://images.unsplash.com/photo-1584273143981-41c073dfe8f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     productName: 'Conjunto Terno Preto',
     productPrice: 210.0,
     productDivision: '6x de R$ 35,00',
@@ -94,7 +94,7 @@ export const productsData = [
   },
   {
     id: '9',
-    img: './src/database/productsImg/vestido-floral-vermelho.jpg',
+    img: 'https://images.unsplash.com/photo-1572804013427-4d7ca7268217?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
     productName: 'Vestido Floral Vermelho',
     productPrice: 150.0,
     productDivision: '6x de R$ 25,00',
