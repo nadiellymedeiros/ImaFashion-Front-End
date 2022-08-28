@@ -8,7 +8,8 @@
 }
 
 .background {
-  background: url('./src/assets/poster.jpg') center no-repeat;
+  background: url('https://img.freepik.com/fotos-gratis/jumper-casual-roxo-em-cabides-na-mao-da-mulher-contra-o-trilho-com-roupas-brancas-de-neve_273609-32782.jpg?w=740&t=st=1661724783~exp=1661725383~hmac=8af60f4afc9b049f68a696dbcae226c25875e96e2c0a9160c55a586e6e4ffc81')
+    center no-repeat;
   background-size: cover;
   height: calc(90vh);
   display: flex;
