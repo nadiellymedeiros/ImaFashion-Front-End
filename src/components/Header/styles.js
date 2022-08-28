@@ -11,6 +11,7 @@ export const Container = styled.header`
   justify-content: space-between;
   color: var(--white);
   overflow: hidden;
+  z-index: 10;
 
   .icons {
     display: flex;
