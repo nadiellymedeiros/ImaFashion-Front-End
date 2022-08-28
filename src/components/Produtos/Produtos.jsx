@@ -17,7 +17,9 @@ export default function Produtos() {
                 <div>
                   <h3>{produto.productName}</h3>
                   <p>
+                    <span>R$ </span>
                     <span>{produto.productPrice}</span>
+                    <span>,00</span>
                   </p>
                   <p>
                     <span>{produto.productDivision}</span>
