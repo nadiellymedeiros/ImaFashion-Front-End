@@ -1,5 +1,5 @@
 .Stat {
-  width: 60vw;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +9,13 @@
   border-radius: 5px;
   padding: 1rem;
 
-  min-width: 22rem;
+  min-width: 15rem;
 }
 
 .Stat h1 {
   color: var(--pink-700);
   line-height: 130%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.4rem;
 }
 
@@ -23,5 +23,5 @@
   margin: 0;
   line-height: 150%;
   color: var(--gray-700);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
