@@ -5,11 +5,6 @@ import { Log } from './pages/LoginPage'
 import { SearchPage } from './pages/SearchPage'
 import ProductPage from './pages/ProductPage'
 import { ShoppingCart } from './components/ShoppingCart/ShoppingCart'
-import { useState } from 'react'
-import { productsData } from './database/productsData'
-
-import { useParams } from 'react-router-dom'
-import { useProduct } from './hooks/useProducts'
 
 export function Router() {
   return (

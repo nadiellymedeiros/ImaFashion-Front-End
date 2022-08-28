@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react'
 import styles from './Produto.module.css'
 import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { CartContext } from '../../context/CartContext/cartContext'
 
 export default function Produto(id) {
-  const [ size, setSize ] = useState("")
+  const [size, setSize] = useState('')
   const { estoque, handleAddItemToCart } = useContext(CartContext)
 
   const handleProductId = estoque?.filter(product => product.id === id.id)
 
-  function handleValidateItemToAddToCart(){
-    if (size !== "") {
+  function handleValidateItemToAddToCart() {
+    if (size !== '') {
       handleAddItemToCart(
         handleProductId[0].id,
         handleProductId[0].img,
@@ -21,8 +20,8 @@ export default function Produto(id) {
         size
       )
     } else {
-      alert("Selecione um tamanho, por gentileza!")
-    } 
+      alert('Selecione um tamanho, por gentileza!')
+    }
   }
 
   return (
@@ -44,9 +43,15 @@ export default function Produto(id) {
           </div>
           <div>
             <h1>Tamanho - {size}</h1>
-            <button className={styles.tochekout} onClick={()=>setSize("P")} >P</button>
-            <button className={styles.tochekout} onClick={()=>setSize("M")} >M</button>
-            <button className={styles.tochekout} onClick={()=>setSize("G")} >G</button>
+            <button className={styles.tochekout} onClick={() => setSize('P')}>
+              P
+            </button>
+            <button className={styles.tochekout} onClick={() => setSize('M')}>
+              M
+            </button>
+            <button className={styles.tochekout} onClick={() => setSize('G')}>
+              G
+            </button>
           </div>
           <div>
             <button

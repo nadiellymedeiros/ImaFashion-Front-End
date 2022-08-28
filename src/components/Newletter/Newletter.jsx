@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Newletter.module.css'
 
 export default function Newletter() {

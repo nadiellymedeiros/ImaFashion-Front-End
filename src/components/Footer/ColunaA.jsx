@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from './Logo'
 import Texto from './Texto'
 import styles from './ColunaA.module.css'

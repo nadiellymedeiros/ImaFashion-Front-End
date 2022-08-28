@@ -1,4 +1,3 @@
-import { UserRectangle, ListDashes, MapPinLine } from 'phosphor-react'
 import styles from './Login.module.css'
 
 export function Login() {

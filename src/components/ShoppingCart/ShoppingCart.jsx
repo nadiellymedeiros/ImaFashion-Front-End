@@ -1,13 +1,19 @@
 import styles from './ShoppingCart.module.css'
 import Product from './Product'
 
-import data from './data'
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/cartContext'
 
 export function ShoppingCart() {
-  const { estoque, cart, handleAddItemToCart, totalPrice, onIncrease, onDecrease, onRemove } =
-    useContext(CartContext)
+  const {
+    estoque,
+    cart,
+    handleAddItemToCart,
+    totalPrice,
+    onIncrease,
+    onDecrease,
+    onRemove
+  } = useContext(CartContext)
 
   return (
     <section className={styles.scMenu}>

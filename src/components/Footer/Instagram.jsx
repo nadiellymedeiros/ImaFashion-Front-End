@@ -1,4 +1,3 @@
-import React from 'react'
 import { InstagramLogo } from 'phosphor-react'
 import styles from './Instagram.module.css'
 

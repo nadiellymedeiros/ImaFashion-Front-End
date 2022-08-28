@@ -1,4 +1,3 @@
-import React from 'react'
 import { FacebookLogo } from 'phosphor-react'
 import styles from './Facebook.module.css'
 

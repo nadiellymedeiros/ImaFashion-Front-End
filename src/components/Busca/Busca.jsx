@@ -1,5 +1,4 @@
 import styles from './Busca.module.css'
-import { MagnifyingGlass } from 'phosphor-react'
 import { Card } from './Card'
 import { productsData } from '../../database/productsData'
 import { useState } from 'react'
