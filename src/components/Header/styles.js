@@ -84,9 +84,7 @@ export const TextLink = styled.span`
   color: var(--pink-700);
   text-decoration: none;
   font-size: 0.8rem;
-  background-color: var(--pink-100);
-  min-width: 10px;
-  min-height: 10px;
-  padding: 3px;
-  border-radius: 5px;
+  background: var(--pink-100);
+  padding-inline: 6px;
+  border-radius: 50%;
 `

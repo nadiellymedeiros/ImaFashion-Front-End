@@ -10,11 +10,8 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/cartContext'
 
 export function Header({ setMenuIsVisible }) {
-
   const { cart } = useContext(CartContext)
-  
 
-  
   return (
     <Container>
       <section>
@@ -29,11 +26,9 @@ export function Header({ setMenuIsVisible }) {
       </section>
 
       <section>
-        <Link to="carrinho" className='link'>
+        <Link to="carrinho">
           <ShoppingCart className="icon" />
-          <TextLink>
-          {cart?.length}
-          </TextLink>
+          <TextLink>{cart?.length}</TextLink>
         </Link>
 
         <Link to="busca">
