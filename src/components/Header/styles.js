@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
+  position: fixed;
   width: 100vw;
   background-color: var(--pink-700);
 
@@ -10,9 +11,27 @@ export const Container = styled.header`
   justify-content: space-between;
   color: var(--white);
 
+  .icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .ShoppingIcon {
+    text-decoration: none;
+    color: var(--white);
+    position: relative;
+  }
+
+  .CartLength {
+    position: absolute;
+
+    top: 2rem;
+    right: 5.6rem;
+  }
+
   .icon {
     text-decoration: none;
-    color: white;
+    color: var(--white);
   }
 
   > section {
@@ -83,8 +102,8 @@ export const Container = styled.header`
 export const TextLink = styled.span`
   color: var(--pink-700);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background: var(--pink-100);
-  padding-inline: 6px;
+  padding-inline: 5px;
   border-radius: 50%;
 `

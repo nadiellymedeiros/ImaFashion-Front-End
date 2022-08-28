@@ -28,10 +28,10 @@ export function Header({ setMenuIsVisible }) {
         </nav>
       </section>
 
-      <section>
+      <section className="icons">
         <Link to="carrinho">
-          <ShoppingCart className="icon" />
-          <TextLink>{cart?.length}</TextLink>
+          <ShoppingCart className="ShoppingIcon" />
+          <TextLink className="CartLength">{cart?.length}</TextLink>
         </Link>
 
         <Link to="busca">
