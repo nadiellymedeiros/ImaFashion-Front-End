@@ -1,15 +1,15 @@
 export const productsData = [
   {
     id: '0',
-    img: 'https://images.unsplash.com/photo-1533399710066-c33de66fe6bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    productName: 'Blusa Decote V Listrada',
+    img: 'https://images.unsplash.com/photo-1608234807905-4466023792f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
+    productName: 'Blusa Manga Longa Branca',
     productPrice: 90.0,
     productDivision: '6x de R$ 15,00',
     hasDiscount: true,
     productType: 'blouse',
-    size: ['P', 'M', 'G'],
-    qty: 1
+    size: ['P', 'M', 'G']
   },
+
   {
     id: '1',
     img: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
@@ -23,14 +23,13 @@ export const productsData = [
   },
   {
     id: '2',
-    img: 'https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80',
-    productName: 'Conjunto Marinho',
-    productPrice: 150.0,
-    productDivision: '6x de R$ 25,00',
+    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1020&q=80',
+    productName: 'Conjunto Moletom Amarelo',
+    productPrice: 180.0,
+    productDivision: '6x de R$ 30,00',
     hasDiscount: false,
     productType: 'conjunct',
-    size: ['P', 'M', 'G'],
-    qty: 1
+    size: ['P', 'M', 'G']
   },
   {
     id: '3',
@@ -44,13 +43,14 @@ export const productsData = [
   },
   {
     id: '4',
-    img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1020&q=80',
-    productName: 'Conjunto Moletom Amarelo',
-    productPrice: 180.0,
-    productDivision: '6x de R$ 30,00',
+    img: 'https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80',
+    productName: 'Conjunto Marinho',
+    productPrice: 150.0,
+    productDivision: '6x de R$ 25,00',
     hasDiscount: false,
     productType: 'conjunct',
-    size: ['P', 'M', 'G']
+    size: ['P', 'M', 'G'],
+    qty: 1
   },
   {
     id: '5',
@@ -124,13 +124,14 @@ export const productsData = [
   },
   {
     id: '12',
-    img: 'https://images.unsplash.com/photo-1608234807905-4466023792f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
-    productName: 'Blusa Manga Longa Branca',
+    img: 'https://images.unsplash.com/photo-1533399710066-c33de66fe6bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+    productName: 'Blusa Decote V Listrada',
     productPrice: 90.0,
     productDivision: '6x de R$ 15,00',
     hasDiscount: true,
     productType: 'blouse',
-    size: ['P', 'M', 'G']
+    size: ['P', 'M', 'G'],
+    qty: 1
   },
   {
     id: '13',
