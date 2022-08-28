@@ -44,49 +44,6 @@
   border-bottom: 1px solid var(--gray-500);
 }
 
-.main .card {
-  display: flex;
-
-  justify-content: flex-start;
-  align-items: center;
-  border-top: 1px solid var(--gray-500);
-  gap: 2rem;
-  padding: 0.5rem;
-}
-
-.main .photo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.main .card img {
-  width: 6rem;
-}
-
-.main .photo i {
-  cursor: pointer;
-  font-size: 2rem;
-  color: black;
-}
-
-.main .photo i:hover {
-  color: red;
-}
-
-.main .card .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.main .card .text p {
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  font-size: 0.8rem;
-}
-
 /* MAIN-LEFT */
 
 .main .infos {
@@ -205,7 +162,7 @@
 }
 
 .main .payment {
-  width: 80vw;
+  width: 100vw;
   padding-top: 1rem;
   display: flex;
 
@@ -214,15 +171,15 @@
 }
 
 .main .payment .type {
-  width: 80vw;
+  width: 90vw;
   gap: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .main .payment .type label {
-  width: 95%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;

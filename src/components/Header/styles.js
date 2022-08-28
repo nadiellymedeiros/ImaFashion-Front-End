@@ -10,6 +10,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
   color: var(--white);
+  overflow: hidden;
 
   .icons {
     display: flex;
@@ -20,16 +21,18 @@ export const Container = styled.header`
     text-decoration: none;
     color: var(--white);
     position: relative;
+    overflow: hidden;
   }
 
   .CartLength {
     position: absolute;
-
+    overflow: hidden;
     top: 2rem;
     right: 5.6rem;
   }
 
   .icon {
+    overflow: hidden;
     text-decoration: none;
     color: var(--white);
   }
@@ -55,8 +58,10 @@ export const Container = styled.header`
       display: flex;
       align-items: center;
       gap: 1.8rem;
+      overflow: hidden;
 
       a {
+        overflow: hidden;
         font-size: 18px;
         position: relative;
         text-decoration: none;

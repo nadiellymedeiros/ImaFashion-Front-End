@@ -1,60 +1,41 @@
 import styles from './Checkout.module.css'
-import { XCircle } from 'phosphor-react'
+import { ProductCheckoutCard } from './productCheckoutCard'
+import { CartContext } from '../../context/CartContext/cartContext'
+import { useContext } from 'react'
 
 export function Checkout() {
+  const {
+    estoque,
+    cart,
+    handleAddItemToCart,
+    totalPrice,
+    onIncrease,
+    onDecrease,
+    onRemove
+  } = useContext(CartContext)
+
   return (
     <section>
       <main className={styles.main}>
         <section className={styles.order}>
           <h2>Seu pedido</h2>
           <div className={styles.cards}>
-            <span className={styles.card}>
-              <div className={styles.photo}>
-                <i>
-                  <XCircle />
-                </i>
-
-                <img
-                  className={styles.productImage}
-                  src="./src/assets/conjunto-branco-alfaiataria.jpg"
-                  alt="conjunto"
-                />
-              </div>
-
-              <div className={styles.text}>
-                <p>
-                  <strong>Conjunto Branco Alfaiataria</strong>
-                </p>
-                <p>Tamanho: M</p>
-                <p>Preço: R$ 219,00</p>
-                <p>Quantidade: 1</p>
-                <p>Total: R$ 219,00</p>
-              </div>
-            </span>
-
-            <span className={styles.card}>
-              <div className={styles.photo}>
-                <i>
-                  <XCircle />
-                </i>
-
-                <img
-                  className={styles.productImage}
-                  src="./src/assets/conjunto-branco-alfaiataria.jpg"
-                  alt="conjunto"
-                />
-              </div>
-
-              <div className={styles.text}>
-                <p>
-                  <strong>Conjunto Branco Alfaiataria</strong>
-                </p>
-                <p>Tamanho: M</p>
-                <p>Preço: R$ 219,00</p>
-                <p>Quantidade: 1</p>
-                <p>Total: R$ 219,00</p>
-              </div>
-            </span>
+            {cart?.map((product, i) => {
+              return (
+                <div key={i}>
+                  <ProductCheckoutCard
+                    onRemove={onRemove}
+                    index={i}
+                    id={product.id}
+                    image={product.img}
+                    name={product.name}
+                    price={product.price}
+                    qty={product.qty}
+                    size={product.size}
+                  />
+                </div>
+              )
+            })}
           </div>
         </section>
 
@@ -108,7 +89,7 @@ export function Checkout() {
                     <p>PAC</p>
                     <p>Previsão: 14 dias úteis</p>
                   </span>
-                  <p>R$ 27,50</p>
+                  <p>R$ 30,00</p>
                 </label>
               </form>
 
@@ -132,7 +113,7 @@ export function Checkout() {
                     <p>Retirar próximo ao meu endereço</p>
                     <p>Previsão: 4 dias úteis</p>
                   </span>
-                  <p>R$ 14,80</p>
+                  <p>R$ 14,00</p>
                 </label>
                 <p className={styles.prazoEntrega}></p>
                 <p className={styles.preçoFrete}></p>
@@ -145,7 +126,7 @@ export function Checkout() {
                     <p>Package</p>
                     <p>Previsão: 14 dias úteis</p>
                   </span>
-                  <p>R$ 29,50</p>
+                  <p>R$ 30,00</p>
                 </label>
                 <p className={styles.prazoEntrega}></p>
                 <p className={styles.preçoFrete}></p>
@@ -159,17 +140,20 @@ export function Checkout() {
             <h2>Resumo</h2>
             <span>
               <p>Sub-total</p>
-              <p>R$ 438,00</p>
+              <p>R$ {totalPrice},00</p>
             </span>
             <span>
               <p>PAC</p>
-              <p>R$ 27,50</p>
+              <p>R$ 30,00</p>
             </span>
             <div className={styles.total}>
               <h2>TOTAL DO PEDIDO</h2>
               <span>
-                <h3>R$ 438,00</h3>
-                <p>ou em até 3x de R$50,00 sem juros</p>
+                <h3>R${totalPrice + 30},00</h3>
+                <p>
+                  ou em até 12x de R${Math.round((totalPrice + 30) / 12)},00 sem
+                  juros
+                </p>
               </span>
             </div>
           </div>
