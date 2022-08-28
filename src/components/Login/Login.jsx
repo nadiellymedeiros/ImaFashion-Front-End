@@ -1,12 +1,9 @@
 import styles from './Login.module.css'
+import { Link } from 'react-router-dom'
 
 export function Login() {
   return (
     <div className={styles.container}>
-      <span className={styles.nav}>
-        <img src="../src/assets/logo-dark.png" alt="" />
-      </span>
-
       <div className={styles.login}>
         <h1>Já sou cliente</h1>
         <form method="post" action="">
@@ -50,31 +47,16 @@ export function Login() {
         </form>
       </div>
 
-      <div className={styles.help}>
-        <a href="#">Esqueci minha senha</a>
+      <div className={styles.Register}>
+        <button className={styles.RegisterButton}>
+          <Link to={`/cadastro`} className={styles.RegisterButton}>
+            Faça seu Cadastro
+          </Link>
+        </button>
       </div>
 
-      <div className={styles.login}>
-        <h1>Criar conta</h1>
-        <form method="post" action="">
-          <p>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Informe o seu Email"
-              name="login"
-              value=""
-            />
-          </p>
-          <p className={styles.submit}>
-            <input
-              className={styles.input}
-              type="submit"
-              name="commit"
-              value="Prosseguir"
-            />
-          </p>
-        </form>
+      <div className={styles.help}>
+        <a href="#">Esqueci minha senha</a>
       </div>
     </div>
   )

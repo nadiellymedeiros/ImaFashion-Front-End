@@ -4,12 +4,6 @@ import styles from './Logon.module.css'
 export function Logon() {
   return (
     <div className={styles.container}>
-      <span className={styles.nav}>
-        <img src="../src/assets/logo-dark.png" alt="" />
-        <h1>Cadastro</h1>
-        <p>Compre mais rápido e acompanhe seus pedidos em um só lugar!</p>
-      </span>
-
       <div className={styles.main}>
         <div className={styles.partec}>
           <div className={styles.parte1}>

@@ -1,8 +1,11 @@
 /* ===== CAR ===== */
 
 .scMenu {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  align-items: center;
 }
 
 .totalLabel {
@@ -23,30 +26,22 @@
   font-weight: bold;
 }
 
-.buttonFinish {
+.finish {
   display: flex;
   justify-content: center;
-  width: 100vw;
-}
+  align-items: center;
 
-.finish {
+  color: white;
+  background: var(--pink-700);
   font-size: 1.4rem;
-  line-height: 5.2rem;
+
   width: 320px;
   height: 60px;
   border: none;
   border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.15rem;
-  background: var(--pink-700);
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 2rem;
 
-  flex-direction: row;
-  align-items: center;
+  letter-spacing: 0.15rem;
+  margin-top: 2rem;
 }
 
 .finish:hover {
@@ -57,12 +52,16 @@
 }
 
 .moreProducts {
-  display: flex;
-  justify-content: center;
-  font-size: 0.8rem;
-  margin: 10px;
-  margin-bottom: 4rem;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-block: 20px;
+  color: var(--pink-700);
   cursor: pointer;
+  opacity: 1;
+}
+
+.moreProducts:hover {
+  opacity: 0.8;
 }
 
 /* ===== PRODUCT ======*/

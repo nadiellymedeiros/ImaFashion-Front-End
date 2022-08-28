@@ -1,6 +1,6 @@
 import styles from './ShoppingCart.module.css'
 import Product from './Product'
-
+import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/cartContext'
 
@@ -49,21 +49,13 @@ export function ShoppingCart() {
         <div className={styles.sumaryValue}>{totalPrice}</div>
       </div>
 
-      <div className={styles.buttonFinish}>
-        <a
-          className={styles.finish}
-          onClick={() => alert('cenas para o próximo capítulo')}
-        >
-          FINALIZAR COMPRA
-        </a>
-      </div>
+      <Link to={`/checkout`} className={styles.finish}>
+        Finalizar Compra
+      </Link>
 
-      <a
-        className={styles.moreProducts}
-        onClick={() => alert('cenas para o próximo capítulo')}
-      >
+      <Link className={styles.moreProducts} to={`/#produtos`}>
         Ver mais produtos
-      </a>
+      </Link>
     </section>
   )
 }

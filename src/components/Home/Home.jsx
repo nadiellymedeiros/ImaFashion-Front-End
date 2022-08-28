@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import { Stat } from './Stat'
+import { Link } from 'react-router-dom'
 
 export function Home() {
   return (
@@ -11,9 +12,10 @@ export function Home() {
             Desejamos que você tenha uma experiência incrível e encantadora na
             nossa loja Online!
           </p>
-          <a href="#contato" className={styles.button}>
-            Entre em contato
-          </a>
+
+          <Link to={`/login`} className={styles.button}>
+            Login
+          </Link>
         </div>
       </div>
 

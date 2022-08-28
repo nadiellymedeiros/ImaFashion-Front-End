@@ -4,17 +4,6 @@ import { XCircle } from 'phosphor-react'
 export function Checkout() {
   return (
     <section>
-      <header>
-        <nav className={styles.navigation}>
-          <a className={styles.logo} href="#home">
-            <img
-              id="dark-logo"
-              src="./src/assets/logo-dark.png"
-              alt="logo da Imã Fashion"
-            />
-          </a>
-        </nav>
-      </header>
       <main className={styles.main}>
         <section className={styles.order}>
           <h2>Seu pedido</h2>

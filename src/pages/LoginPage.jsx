@@ -1,10 +1,9 @@
 import { Login } from '../components/Login/Login'
-import { Logon } from '../components/Logon/Logon'
 
-export function Log() {
+export function LoginPage() {
   return (
     <>
-      <Logon />
+      <Login />
     </>
   )
 }
