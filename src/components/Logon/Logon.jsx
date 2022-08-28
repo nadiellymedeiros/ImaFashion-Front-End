@@ -6,13 +6,10 @@ export function Logon() {
     <div className={styles.container}>
       <div className={styles.main}>
         <div className={styles.partec}>
-          <div className={styles.parte1}>
+          <div className={styles.partec}>
             <fieldset className={styles.fieldset}>
               <legend className={styles.legend}>
-                <UserRectangle
-                  size={34}
-                  style={{ marginRight: 5, marginLeft: 2, marginTop: -15 }}
-                />
+                <UserRectangle size={32} />
                 <h4 className={styles.cadastro}>Tipo de cadastro</h4>
               </legend>
               <div className={styles.tipo}>
@@ -44,7 +41,7 @@ export function Logon() {
           <div className={styles.parte1}>
             <fieldset className={styles.fieldset}>
               <legend className={styles.legend}>
-                <ListDashes size={34} />
+                <ListDashes size={32} />
                 <h4 className={styles.dados}>Dados Pessoais</h4>
               </legend>
 
@@ -111,7 +108,7 @@ export function Logon() {
         <div className={styles.parte2}>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>
-              <MapPinLine size={34} />
+              <MapPinLine size={32} />
               <h4 className={styles.endereço}>Endereço</h4>
             </legend>
 

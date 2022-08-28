@@ -15,7 +15,10 @@ export function Header({ setMenuIsVisible }) {
   return (
     <Container>
       <section>
-        <img src={logoImg} alt="Logo" />
+        <Link to={`/`}>
+          <img src={logoImg} width="200px" alt="Logo" />
+        </Link>
+
         <nav>
           <a href="http://127.0.0.1:5173">Início</a>
           <a href="http://127.0.0.1:5173/#produtos">Produtos</a>
