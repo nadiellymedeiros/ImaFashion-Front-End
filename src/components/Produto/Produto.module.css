@@ -1,59 +1,101 @@
 .produto {
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin: 10rem;
-  background-color: #fef8fb;
+
+  margin-top: 4rem;
+
+  padding: 1rem;
+}
+
+.imagemproduto {
+  width: 14rem;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productDescription p {
+  font-size: 1.2rem;
 }
 
 .tittle {
-  font-size: 2rem;
-  display: block;
-  margin-block-start: 0em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
-.productprice {
-  text-align: left;
-  color: var(--pink-700);
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 2rem;
+  text-align: center;
 }
 
-.productprice {
-  display: block;
+.productDescription .productPrice {
   font-size: 1.8rem;
   font-weight: bold;
 }
 
-.imagemproduto {
-  width: 25rem;
-  height: 30rem;
-  justify-items: center;
-  border-radius: 0.6rem;
+.productSizes {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.productdivision {
+.toChekout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  padding-inline: 0.8rem;
+  font-size: 1rem;
+  background: var(--pink-200);
+  border: none;
+  border-radius: 10px;
+}
+
+.toChekout:hover {
+  background: var(--pink-600);
+}
+
+.links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.toCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  padding-inline: 0.8rem;
   font-size: 1.2rem;
+  background: var(--pink-300);
+  border: none;
+  border-radius: 10px;
+  color: var(--pink-700);
+  cursor: pointer;
 }
 
-.tochekout {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  background: var(--pink-300);
-  border-radius: 0.6rem;
-  border-color: var(--pink-600);
-  
+.toCart:hover {
+  background: var(--pink-700);
+
+  color: var(--pink-300);
 }
 
-.tohome {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  background: var(--pink-300);
-  border-radius: 0.6rem;
-  border-color: var(--pink-600);
-  
+.toHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  padding-inline: 0.8rem;
+  font-size: 1.2rem;
+  background: var(--pink-200);
+  border: none;
+  border-radius: 10px;
+  color: var(--pink-700);
+  text-decoration: none;
+}
+
+.toHome:hover {
+  background: var(--pink-600);
 }

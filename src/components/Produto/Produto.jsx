@@ -1,6 +1,6 @@
 import styles from './Produto.module.css'
 import { Link } from 'react-router-dom'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { CartContext } from '../../context/CartContext/cartContext'
 
 export default function Produto(id) {
@@ -24,49 +24,84 @@ export default function Produto(id) {
     }
   }
 
+  const [corP, setCorP] = useState('#eb9ac9')
+  const [corM, setCorM] = useState('#eb9ac9')
+  const [corG, setCorG] = useState('#eb9ac9')
+
   return (
     <div className={styles.produto}>
-      <div>
-        <img className={styles.imagemproduto} src={handleProductId[0].img} />
+      <img className={styles.imagemproduto} src={handleProductId[0].img} />
+
+      <div className={styles.productDescription}>
+        <h3 className={styles.tittle}>{handleProductId[0].productName}</h3>
+
+        <p className={styles.productPrice}>
+          <span>R$ {handleProductId[0].productPrice},00</span>
+        </p>
+
         <div>
-          <h3 className={styles.tittle}>{handleProductId[0].productName}</h3>
-
-          <p className={styles.productprice}>
-            <span>{handleProductId[0].productPrice}</span>
+          <i></i>
+          <p className={styles.productdivision}>
+            {handleProductId[0].productDivision}
           </p>
-
-          <div>
-            <i></i>
-            <p className={styles.productdivision}>
-              {handleProductId[0].productDivision}
-            </p>
-          </div>
-          <div>
-            <h1>Tamanho - {size}</h1>
-            <button className={styles.tochekout} onClick={() => setSize('P')}>
-              P
-            </button>
-            <button className={styles.tochekout} onClick={() => setSize('M')}>
-              M
-            </button>
-            <button className={styles.tochekout} onClick={() => setSize('G')}>
-              G
-            </button>
-          </div>
-          <div>
-            <button
-              className={styles.tochekout}
-              onClick={() => handleValidateItemToAddToCart()}
-            >
-              Adicionar ao carrinho
-            </button>
-            <button className={styles.tohome}>
-              <Link to={`/`}>Voltar</Link>
-            </button>
-          </div>
+        </div>
+        <div className={styles.productSizes}>
+          <p>Tamanho:</p>
+          <button
+            className={styles.toChekout}
+            onClick={() => {
+              setSize('P')
+              setCorP('#dd57a5')
+              setCorM('#eb9ac9')
+              setCorG('#eb9ac9')
+            }}
+            style={{
+              backgroundColor: corP
+            }}
+          >
+            P
+          </button>
+          <button
+            className={styles.toChekout}
+            onClick={() => {
+              setSize('M')
+              setCorP('#eb9ac9')
+              setCorM('#dd57a5')
+              setCorG('#eb9ac9')
+            }}
+            style={{
+              backgroundColor: corM
+            }}
+          >
+            M
+          </button>
+          <button
+            className={styles.toChekout}
+            onClick={() => {
+              setSize('G')
+              setCorP('#eb9ac9')
+              setCorM('#eb9ac9')
+              setCorG('#dd57a5')
+            }}
+            style={{
+              backgroundColor: corG
+            }}
+          >
+            G
+          </button>
+        </div>
+        <div className={styles.links}>
+          <button
+            className={styles.toCart}
+            onClick={() => handleValidateItemToAddToCart()}
+          >
+            Adicionar ao carrinho
+          </button>
+          <button className={styles.toHome}>
+            <Link to={`/`}>Voltar</Link>
+          </button>
         </div>
       </div>
-      )
     </div>
   )
 }
