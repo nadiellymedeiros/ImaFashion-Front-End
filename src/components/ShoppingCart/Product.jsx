@@ -17,7 +17,10 @@ export default function Product({
   return (
     <div className={styles.product}>
       <div className={styles.productPhotoBox}>
-        <ImageProduct src={image}></ImageProduct>
+        <ImageProduct
+          className={styles.productImage}
+          src={image}
+        ></ImageProduct>
         <button
           className={styles.buttonRemoveItem}
           onClick={() => onRemove(index)}
@@ -43,7 +46,7 @@ export default function Product({
               onClick={() => onDecrease(id, size)}
             >
               <i className={styles.phMinusCircle}>
-                <MinusCircle size={32} />
+                <MinusCircle size={24} />
               </i>
             </button>
 
@@ -53,7 +56,7 @@ export default function Product({
               onClick={() => onIncrease(id, size)}
             >
               <i className={styles.phPlusCircle}>
-                <PlusCircle size={32} />
+                <PlusCircle size={24} />
               </i>
             </button>
           </span>

@@ -7,24 +7,14 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
     document.body.style.overflowY = menuIsVisible ? 'hidden' : 'auto'
   }, [menuIsVisible])
   return (
-    <Container isVisible={menuIsVisible}>
-      <X size={45} onClick={() => setMenuIsVisible(false)} />
+    <Container className="mobileVisible" isVisible={menuIsVisible}>
+      <X className="xIcon" size={45} onClick={() => setMenuIsVisible(false)} />
       <nav>
-        <a  href="http://127.0.0.1:5173">
-          Início
-        </a>
-        <a  href="http://127.0.0.1:5173/#produtos">
-          Produtos
-        </a>
-        <a  href="http://127.0.0.1:5173/#quemSomos">
-          Quem somos
-        </a>
-        <a href="http://127.0.0.1:5173/#newsletter">
-          NewsLetter
-        </a>
-        <a  href="http://127.0.0.1:5173/#contato">
-          Contato
-        </a>
+        <a href="http://127.0.0.1:5173">Início</a>
+        <a href="http://127.0.0.1:5173/#produtos">Produtos</a>
+        <a href="http://127.0.0.1:5173/#quemSomos">Quem somos</a>
+        <a href="http://127.0.0.1:5173/#newsletter">NewsLetter</a>
+        <a href="http://127.0.0.1:5173/#contato">Contato</a>
 
         <a className="button" href="./login">
           CADASTRO

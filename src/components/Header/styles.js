@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   position: fixed;
+  z-index: 10;
   width: 100vw;
   background-color: var(--pink-700);
 
@@ -9,9 +10,8 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
   color: var(--white);
-  overflow: hidden;
-  z-index: 10;
 
   .icons {
     display: flex;
@@ -21,8 +21,6 @@ export const Container = styled.header`
   .ShoppingIcon {
     text-decoration: none;
     color: var(--white);
-    position: relative;
-    overflow: hidden;
   }
 
   .CartLength {

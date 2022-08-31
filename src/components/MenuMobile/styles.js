@@ -2,8 +2,13 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 export const Container = styled.section`
+  .mobileVisible {
+    overflow: hidden;
+  }
+
   color: var(--white);
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   backdrop-filter: blur(3px);
   width: 100%;
   height: 100%;
@@ -11,7 +16,7 @@ export const Container = styled.section`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +61,10 @@ export const Container = styled.section`
   nav a:hover {
     color: var(--white);
     font-weight: bold;
+  }
+
+  .xIcon {
+    cursor: pointer;
   }
 
   .button {
