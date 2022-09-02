@@ -10,11 +10,11 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
     <Container className="mobileVisible" isVisible={menuIsVisible}>
       <X className="xIcon" size={45} onClick={() => setMenuIsVisible(false)} />
       <nav>
-        <a href="http://127.0.0.1:5173">Início</a>
-        <a href="http://127.0.0.1:5173/#produtos">Produtos</a>
-        <a href="http://127.0.0.1:5173/#quemSomos">Quem somos</a>
-        <a href="http://127.0.0.1:5173/#newsletter">NewsLetter</a>
-        <a href="http://127.0.0.1:5173/#contato">Contato</a>
+        <a href="https://imafashion.netlify.app">Início</a>
+        <a href="https://imafashion.netlify.app/#produtos">Produtos</a>
+        <a href="https://imafashion.netlify.app/#quemSomos">Quem somos</a>
+        <a href="https://imafashion.netlify.app/#newsletter">NewsLetter</a>
+        <a href="https://imafashion.netlify.app/#contato">Contato</a>
 
         <a className="button" href="./login">
           CADASTRO

@@ -75,11 +75,13 @@ export const Container = styled.header`
           height: 1.5px;
           background: white;
           transition: 0.25s;
+          z-index: 1000000;
         }
 
         &:hover {
           &:before {
             width: 100%;
+            z-index: 100000000;
           }
         }
       }
