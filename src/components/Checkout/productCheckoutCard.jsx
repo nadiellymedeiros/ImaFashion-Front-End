@@ -1,5 +1,6 @@
-import styles from './productCheckoutCard.module.css'
-import { XCircle } from 'phosphor-react'
+import styles from "./productCheckoutCard.module.css";
+import { XCircle } from "phosphor-react";
+import axios from "axios";
 
 export function ProductCheckoutCard({
   id,
@@ -9,12 +10,20 @@ export function ProductCheckoutCard({
   price,
   qty,
   size,
-  onRemove
+  onRemove,
 }) {
   return (
     <span className={styles.card}>
       <div className={styles.photo}>
-        <i onClick={() => onRemove(index)}>
+        <i
+          onClick={() => {
+            axios
+              .delete(`http://localhost:8180/carrinhodecompras/${id}`)
+
+              .then(() => onRemove(index))
+              .catch((err) => console.log(err.message));
+          }}
+        >
           <XCircle />
         </i>
 
@@ -31,5 +40,5 @@ export function ProductCheckoutCard({
         <p>Total: R$ {price * qty},00</p>
       </div>
     </span>
-  )
+  );
 }

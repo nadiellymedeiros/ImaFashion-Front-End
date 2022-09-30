@@ -1,7 +1,8 @@
-import styles from './Checkout.module.css'
-import { ProductCheckoutCard } from './productCheckoutCard'
-import { CartContext } from '../../context/CartContext/cartContext'
-import { useContext } from 'react'
+import styles from "./Checkout.module.css";
+import { ProductCheckoutCard } from "./productCheckoutCard";
+import { CartContext } from "../../context/CartContext/cartContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export function Checkout() {
   const {
@@ -11,8 +12,8 @@ export function Checkout() {
     totalPrice,
     onIncrease,
     onDecrease,
-    onRemove
-  } = useContext(CartContext)
+    onRemove,
+  } = useContext(CartContext);
 
   return (
     <section>
@@ -34,7 +35,7 @@ export function Checkout() {
                     size={product.size}
                   />
                 </div>
-              )
+              );
             })}
           </div>
         </section>
@@ -197,10 +198,11 @@ export function Checkout() {
 
       <footer className={styles.footer}>
         <a href="/">Voltar para o site</a>
-        <a className={styles.endShopping} href="#">
-          Finalizar compra
-        </a>
+
+        <button className={styles.endShopping}>
+          <Link to={`/pedido`}>Finalizar compra</Link>
+        </button>
       </footer>
     </section>
-  )
+  );
 }

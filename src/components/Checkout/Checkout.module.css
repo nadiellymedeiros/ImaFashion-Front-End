@@ -91,7 +91,7 @@
 .main .infos .types {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'col-a col-b';
+  grid-template-areas: "col-a col-b";
   gap: 0.5rem;
 }
 
@@ -210,5 +210,8 @@
 
 .footer .endShopping:hover {
   opacity: 1;
+  cursor: pointer;
+  color: var(--pink-700);
   background-color: var(--pink-600);
+  color: white;
 }

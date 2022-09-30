@@ -1,6 +1,7 @@
-import { Trash, MinusCircle, PlusCircle } from 'phosphor-react'
-import styles from './Product.module.css'
-import ImageProduct from './ImageProduct'
+import { Trash, MinusCircle, PlusCircle } from "phosphor-react";
+import styles from "./Product.module.css";
+import ImageProduct from "./ImageProduct";
+import axios from "axios";
 
 export default function Product({
   onIncrease,
@@ -12,7 +13,7 @@ export default function Product({
   name,
   price,
   qty,
-  size
+  size,
 }) {
   return (
     <div className={styles.product}>
@@ -23,7 +24,12 @@ export default function Product({
         ></ImageProduct>
         <button
           className={styles.buttonRemoveItem}
-          onClick={() => onRemove(index)}
+          onClick={() => {
+            axios
+              .delete(`http://localhost:8180/carrinhodecompras/${id}`)
+              .then(() => onRemove(index))
+              .catch((err) => console.log(err.message));
+          }}
         >
           <i className={styles.phTrash}>
             <Trash />
@@ -63,5 +69,5 @@ export default function Product({
         </div>
       </div>
     </div>
-  )
+  );
 }

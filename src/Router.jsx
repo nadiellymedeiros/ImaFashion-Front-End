@@ -1,11 +1,12 @@
-import { Route, Routes } from 'react-router-dom'
-import { HomePage } from './pages/HomePage'
-import { CheckoutPage } from './pages/CheckoutPage'
-import { LoginPage } from './pages/LoginPage'
-import { RegisterPage } from './pages/RegisterPage'
-import { SearchPage } from './pages/SearchPage'
-import ProductPage from './pages/ProductPage'
-import { ShoppingCart } from './components/ShoppingCart/ShoppingCart'
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { CheckoutPage } from "./pages/CheckoutPage";
+import { LoginPage } from "./pages/LoginPage";
+import { RegisterPage } from "./pages/RegisterPage";
+import { SearchPage } from "./pages/SearchPage";
+import ProductPage from "./pages/ProductPage";
+import { ShoppingCart } from "./components/ShoppingCart/ShoppingCart";
+import { Pedido } from "./components/Pedido/Pedido";
 
 export function Router() {
   return (
@@ -17,6 +18,7 @@ export function Router() {
       <Route path="/productPage/:id" element={<ProductPage />} />
       <Route path="/busca" element={<SearchPage />} />
       <Route path="/carrinho" element={<ShoppingCart />} />
+      <Route path="/pedido" element={<Pedido />} />
     </Routes>
-  )
+  );
 }

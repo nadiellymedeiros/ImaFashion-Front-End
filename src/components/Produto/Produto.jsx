@@ -1,16 +1,17 @@
-import styles from './Produto.module.css'
-import { Link } from 'react-router-dom'
-import { useState, useContext, useEffect } from 'react'
-import { CartContext } from '../../context/CartContext/cartContext'
+import styles from "./Produto.module.css";
+import { Link } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
+import { CartContext } from "../../context/CartContext/cartContext";
+import axios from "axios";
 
 export default function Produto(id) {
-  const [size, setSize] = useState('')
-  const { estoque, handleAddItemToCart } = useContext(CartContext)
+  const [size, setSize] = useState("");
+  const { estoque, handleAddItemToCart } = useContext(CartContext);
 
-  const handleProductId = estoque?.filter(product => product.id === id.id)
+  const handleProductId = estoque?.filter((product) => product.id === id.id);
 
   function handleValidateItemToAddToCart() {
-    if (size !== '') {
+    if (size !== "") {
       handleAddItemToCart(
         handleProductId[0].id,
         handleProductId[0].img,
@@ -18,15 +19,15 @@ export default function Produto(id) {
         handleProductId[0].productPrice,
         1,
         size
-      )
+      );
     } else {
-      alert('Selecione um tamanho, por gentileza!')
+      alert("Selecione um tamanho, por gentileza!");
     }
   }
 
-  const [corP, setCorP] = useState('#eb9ac9')
-  const [corM, setCorM] = useState('#eb9ac9')
-  const [corG, setCorG] = useState('#eb9ac9')
+  const [corP, setCorP] = useState("#eb9ac9");
+  const [corM, setCorM] = useState("#eb9ac9");
+  const [corG, setCorG] = useState("#eb9ac9");
 
   return (
     <div className={styles.produto}>
@@ -50,13 +51,13 @@ export default function Produto(id) {
           <button
             className={styles.toChekout}
             onClick={() => {
-              setSize('P')
-              setCorP('#dd57a5')
-              setCorM('#eb9ac9')
-              setCorG('#eb9ac9')
+              setSize("P");
+              setCorP("#dd57a5");
+              setCorM("#eb9ac9");
+              setCorG("#eb9ac9");
             }}
             style={{
-              backgroundColor: corP
+              backgroundColor: corP,
             }}
           >
             P
@@ -64,13 +65,13 @@ export default function Produto(id) {
           <button
             className={styles.toChekout}
             onClick={() => {
-              setSize('M')
-              setCorP('#eb9ac9')
-              setCorM('#dd57a5')
-              setCorG('#eb9ac9')
+              setSize("M");
+              setCorP("#eb9ac9");
+              setCorM("#dd57a5");
+              setCorG("#eb9ac9");
             }}
             style={{
-              backgroundColor: corM
+              backgroundColor: corM,
             }}
           >
             M
@@ -78,13 +79,13 @@ export default function Produto(id) {
           <button
             className={styles.toChekout}
             onClick={() => {
-              setSize('G')
-              setCorP('#eb9ac9')
-              setCorM('#eb9ac9')
-              setCorG('#dd57a5')
+              setSize("G");
+              setCorP("#eb9ac9");
+              setCorM("#eb9ac9");
+              setCorG("#dd57a5");
             }}
             style={{
-              backgroundColor: corG
+              backgroundColor: corG,
             }}
           >
             G
@@ -93,7 +94,19 @@ export default function Produto(id) {
         <div className={styles.links}>
           <button
             className={styles.toCart}
-            onClick={() => handleValidateItemToAddToCart()}
+            onClick={() => {
+              axios
+                .post("http://localhost:8180/carrinhodecompras", {
+                  id: handleProductId[0].id,
+                  name: handleProductId[0].productName,
+                  code: handleProductId[0].code,
+                  price: handleProductId[0].productPrice,
+                  quantity: 1,
+                  size: size,
+                })
+                .then((response) => handleValidateItemToAddToCart())
+                .catch((err) => console.log("deu ruim"));
+            }}
           >
             Adicionar ao carrinho
           </button>
@@ -103,5 +116,5 @@ export default function Produto(id) {
         </div>
       </div>
     </div>
-  )
+  );
 }
