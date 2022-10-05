@@ -49,7 +49,16 @@ export default function Product({
           <span className={styles.plusOrMinus}>
             <button
               className={styles.buttonMinus}
-              onClick={() => onDecrease(id, size)}
+              onClick={() => {
+                axios
+                  .put(
+                    `http://localhost:8180/carrinhodecompras/removeProduct/${id}`
+                  )
+                  .then(() => {
+                    onDecrease(id, size);
+                  })
+                  .catch((err) => console.log(err.message));
+              }}
             >
               <i className={styles.phMinusCircle}>
                 <MinusCircle size={24} />
@@ -59,7 +68,16 @@ export default function Product({
             <p className={styles.spaceQuantity}>{qty}</p>
             <button
               className={styles.buttonPlus}
-              onClick={() => onIncrease(id, size)}
+              onClick={() => {
+                axios
+                  .put(
+                    `http://localhost:8180/carrinhodecompras/addProduct/${id}`
+                  )
+                  .then(() => {
+                    onIncrease(id, size);
+                  })
+                  .catch((err) => console.log(err.message));
+              }}
             >
               <i className={styles.phPlusCircle}>
                 <PlusCircle size={24} />
