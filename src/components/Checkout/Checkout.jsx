@@ -3,17 +3,10 @@ import { ProductCheckoutCard } from "./productCheckoutCard";
 import { CartContext } from "../../context/CartContext/cartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export function Checkout() {
-  const {
-    estoque,
-    cart,
-    handleAddItemToCart,
-    totalPrice,
-    onIncrease,
-    onDecrease,
-    onRemove,
-  } = useContext(CartContext);
+  const { cart, totalPrice, onRemove } = useContext(CartContext);
 
   return (
     <section>
@@ -199,7 +192,25 @@ export function Checkout() {
       <footer className={styles.footer}>
         <a href="/">Voltar para o site</a>
 
-        <button className={styles.endShopping}>
+        <button
+          className={styles.endShopping}
+          onClick={() => {
+            axios
+              .post("http://localhost:8180/sendmessage", {
+                nome: "Nadielly",
+                pedido: "1001",
+                email: "test@test.com",
+                endereco: "Rua t-44, n. 174 Bueno, Goiânia-GO 74210-150",
+                frete: "PAC",
+                freteValue: 30,
+                tipoPagamento: "Boleto",
+              })
+              .then((response) => {
+                navigate("/pedido");
+              })
+              .catch((err) => console.log("deu ruim"));
+          }}
+        >
           <Link to={`/pedido`}>Finalizar compra</Link>
         </button>
       </footer>
