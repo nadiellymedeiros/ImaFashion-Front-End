@@ -1,6 +1,6 @@
 .shopsection {
   display: grid;
-  grid-template-areas: 'a b c';
+  grid-template-areas: "a b c";
   justify-items: center;
   gap: 3.2rem;
   flex-direction: column;
