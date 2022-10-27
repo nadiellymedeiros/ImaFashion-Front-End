@@ -76,7 +76,7 @@ export const productsData = [
     productPrice: 60.0,
     productDivision: "6x de R$ 10,00",
     hasDiscount: true,
-    productType: "t-shirt",
+    productType: "blouse",
     size: ["P", "M", "G"],
   },
   {
@@ -87,7 +87,7 @@ export const productsData = [
     productPrice: 60.0,
     productDivision: "6x de R$ 10,00",
     hasDiscount: false,
-    productType: "t-shirt",
+    productType: "blouse",
     size: ["P", "M", "G"],
   },
   {
