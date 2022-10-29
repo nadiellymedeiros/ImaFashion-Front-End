@@ -1,15 +1,20 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import Produtos from "../Produtos/Produtos";
+import { Link } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { CartContext } from "../../context/CartContext/cartContext";
+import { CaretCircleLeft, CaretCircleRight } from "phosphor-react";
 import styles from "../Produtos/Produtos.module.css";
 import "./Recommendations.css";
-import { CaretCircleLeft, CaretCircleRight } from "phosphor-react";
 
 export default function ProductPage(params) {
   var { estoque } = useContext(CartContext);
   const carousel = useRef(null);
+
+  const tipo = estoque.find((produto) => produto.id === params.id).productType;
+
+  estoque = estoque.filter(
+    (produto) => produto.productType === tipo && produto.id !== params.id
+  );
 
   const handleLeftClick = (e) => {
     e.preventDefault();
@@ -21,17 +26,12 @@ export default function ProductPage(params) {
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
-  if (params.id) {
-    const tipo = estoque.find(
-      (produto) => produto.id === params.id
-    ).productType;
-    estoque = estoque.filter(
-      (produto) => produto.productType === tipo && produto.id !== params.id
-    );
-  }
-
   return (
     <div className="recommendationContainer">
+      <div>
+        <p className="recommendationsTitle">VOCÊ PODE GOSTAR</p>
+      </div>
+
       <div className="carousel" ref={carousel}>
         {estoque?.map((produto) => {
           return (
@@ -75,12 +75,4 @@ export default function ProductPage(params) {
       </div>
     </div>
   );
-
-  // return (
-  //   <div>
-  //     <div className="HomePage">
-  //       <Produtos id={id} />
-  //     </div>
-  //   </div>
-  // );
 }

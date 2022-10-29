@@ -9,21 +9,7 @@ export default function ProductPage() {
   return (
     <div>
       <Produto id={id} />
-
       <Recommendations id={id} />
     </div>
   );
 }
-
-// export default function ProductPage() {
-//   const { id } = useParams();
-
-//   return (
-//     <div>
-//       <Produto id={id} />
-//       <div className="HomePage">
-//         <Produtos id={id} />
-//       </div>
-//     </div>
-//   );
-// }

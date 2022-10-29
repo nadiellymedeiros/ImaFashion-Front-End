@@ -1,16 +1,26 @@
 .recommendationContainer {
   max-width: 100vw;
+  height: 780px;
   justify-content: center;
   align-items: center;
-  padding: 0 50px 10px 50px;
+  padding: 180px 50px 0.5px 50px; */
+  display: flex
+}
+
+.recommendationsTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+  color: var(--pink-700);
 }
 
 .recommendationContainer .carousel {
   display: flex;
   overflow-x: auto;
   gap: 3.2rem;
-  height: 58vh;
   scroll-behavior: smooth;
+  justify-content: center;
 }
 
 .recommendationContainer .carousel::-webkit-scrollbar {
@@ -33,12 +43,17 @@
 }
 
 @media (max-width: 800px) {
-  .recommendationContainer .carousel {
-    height: 55vh;
+
+  .recommendationContainer {
+   
+    padding: 180px 50px 0.5px 50px; */
+   
   }
 
   .recommendationContainer .carousel {
     width: 270px;
     padding-left: 1.8rem;
+    height: 55vh;
+    gap: 0 3rem;
   }
 }

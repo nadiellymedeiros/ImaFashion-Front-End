@@ -98,11 +98,3 @@
 .toHome:hover {
   background: var(--pink-600);
 }
-
-.recommendations {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 3rem;
-  margin-top: 10rem;
-}

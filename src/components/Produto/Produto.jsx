@@ -117,9 +117,6 @@ export default function Produto(id) {
           </div>
         </div>
       </div>
-      <div>
-        <p className={styles.recommendations}>VOCÊ PODE GOSTAR</p>
-      </div>
     </>
   );
 }

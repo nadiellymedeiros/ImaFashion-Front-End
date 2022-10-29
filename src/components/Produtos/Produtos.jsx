@@ -6,14 +6,14 @@ import { CartContext } from "../../context/CartContext/cartContext";
 export default function Produtos(params) {
   var { estoque } = useContext(CartContext);
 
-  if (params.id) {
-    const tipo = estoque.find(
-      (produto) => produto.id === params.id
-    ).productType;
-    estoque = estoque.filter(
-      (produto) => produto.productType === tipo && produto.id !== params.id
-    );
-  }
+  // if (params.id) {
+  //   const tipo = estoque.find(
+  //     (produto) => produto.id === params.id
+  //   ).productType;
+  //   estoque = estoque.filter(
+  //     (produto) => produto.productType === tipo && produto.id !== params.id
+  //   );
+  // }
 
   return (
     <section id="produtos" className={styles.shopsection}>
