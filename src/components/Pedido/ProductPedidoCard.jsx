@@ -1,4 +1,4 @@
-import styles from "./productPedidoCard.module.css";
+import styles from "./ProductPedidoCard.module.css";
 
 export function ProductPedidoCard({ image, name, price, qty, size }) {
   return (
